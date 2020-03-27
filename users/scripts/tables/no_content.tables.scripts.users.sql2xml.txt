@@ -1,0 +1,2 @@
+[2020-03-25, Arjan Sieverink]
+Users are taken from the PERSON_SAPDATA table, so there is no separate table, view or bulkInstert script provided.

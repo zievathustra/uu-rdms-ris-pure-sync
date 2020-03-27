@@ -1,0 +1,18 @@
+Links to Pure documentation on synchronisations
+
+[Intro]
+https://doc.pure.elsevier.com/display/PureClient/Synchronizations?src=sidebar
+
+[General]
+https://doc.pure.elsevier.com/display/PureClient/General+synchronisation+information?src=sidebar
+
+[Organisations]
+https://doc.pure.elsevier.com/display/PureClient/Configurable+Organisation+Synchronisation?src=sidebar
+
+[Persons and users]
+https://doc.pure.elsevier.com/display/PureClient/Configurable+Person+Synchronisation?src=sidebar
+
+[Projects]
+https://doc.pure.elsevier.com/display/PureClient/Project+model+synchronisation?src=sidebar
+
+
