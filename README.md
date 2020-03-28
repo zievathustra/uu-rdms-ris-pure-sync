@@ -1,4 +1,4 @@
-# ***Pure synchronisations: SQL to xml***
+# **Pure synchronisations: SQL to xml**
 
 ## Introduction
 Currently, synchronisations of organisations, persons, projects and users from UU systems are configured to run via a **jdbc connection**. Since UU hosts Pure on its own infrastructure, this is fine for now. As we plan to move Pure to Elsevier hosting at Amazon Web Services (AWS), a jdbc connection is considered a **security risk**. While mitigating solutions like tunneling the connection through OpenSSH are readily available, we think that, from an **architectural point of view**, it would be better to not use database connections at all. Therefore, we decided to move to **exchanging xml files**.
@@ -61,6 +61,6 @@ At UU the *Projects* module, though enabled, is of little use due to typical, ad
 Scripts are ready for use but need to be run manually. Furthermore, saving the xml output to file needs to be done by hand, too. In the next phase, I'll try and automate and schedule running the scripts and saving the xml outputs to file.
 
 ## Disclaimer
-I'm no T-SQL guru...so I started with basic knowledge, I searched the net where I hit a wall and I tried and failed until I got it working again, step by step. Please allow for code that won't win awards and feel free to share your suggestions for improvement.
+I'm no T-SQL guru...so I started with basic knowledge, I searched the net and where I hit a wall I tried and failed until I got it working again, step by step. Please allow for code that won't win awards and feel free to share your suggestions for improvement.
 
 You're welcome to find me at [Utrecht University](https://www.uu.nl/staff/JASieverink) or at [LinkedIn](https://www.linkedin.com/in/arjansieverink).
