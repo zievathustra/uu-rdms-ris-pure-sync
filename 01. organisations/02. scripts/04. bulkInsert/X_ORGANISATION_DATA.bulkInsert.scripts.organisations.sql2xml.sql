@@ -8,7 +8,10 @@
 [CHANGES]	<01>	replace '" "' values with <nothing> in source fie
 		<02>	replace 'NULL' values with <nothing> in source file
 */
+
 USE PUREP_Staging
+GO
+
 BULK
 INSERT dbo.ORGANISATION_DATA
 FROM '/home/sieve002/uusharepoint/Team Pure2AWS - Documents/General/sql2xmlData/organisations/data/import2sql/X_ORGANISATION_DATA.import2sql.data.organisations.sql2xml.csv'
