@@ -1,10 +1,10 @@
 /*
-[DATE]			2020-03-26
-[ORGANISATION]	Utrecht University
-[EMPLOYEE]		Arjan Sieverink
-[CONTACT1]		https://www.uu.nl/staff/JASieverink
-[CONTACT2]		https://www.linkedin.com/in/arjansieverink
-[REMARKS]		Populate database tables via BULK INSERT
+[DATE]          2020-03-26
+[ORGANISATION]  Utrecht University
+[EMPLOYEE]      Arjan Sieverink
+[CONTACT1]      https://www.uu.nl/staff/JASieverink
+[CONTACT2]      https://www.linkedin.com/in/arjansieverink
+[REMARKS]       Populate database tables via BULK INSERT
 */
 
 USE PUREP_Staging

@@ -1,10 +1,10 @@
 /*
-[DATE]			2020-03-26
-[ORGANISATION]	Utrecht University
-[EMPLOYEE]		Arjan Sieverink
-[CONTACT1]		https://www.uu.nl/staff/JASieverink
-[CONTACT2]		https://www.linkedin.com/in/arjansieverink
-[REMARKS]		Create database tables and views
+[DATE]            2020-03-26
+[ORGANISATION]    Utrecht University
+[EMPLOYEE]        Arjan Sieverink
+[CONTACT1]        https://www.uu.nl/staff/JASieverink
+[CONTACT2]        https://www.linkedin.com/in/arjansieverink
+[REMARKS]         Create database tables and views
 */
 USE PUREP_Staging
 GO
@@ -18,145 +18,134 @@ GO
 /* TABLES */
 
 CREATE TABLE [dbo].[ORGANISATION_DATA](
-	[ORGANISATION_ID] [nvarchar](255) NOT NULL,
-	[TYPE] [nvarchar](255) NULL,
-	[NAME] [nvarchar](255) NULL,
-	[START_DATE] [date] NULL,
-	[END_DATE] [date] NULL
+    [ORGANISATION_ID] [nvarchar](255) NOT NULL,
+    [TYPE] [nvarchar](255) NULL,
+    [NAME] [nvarchar](255) NULL,
+    [START_DATE] [date] NULL,
+    [END_DATE] [date] NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[ORGANISATION_HIERARCHY](
-	[PARENT_ORGANISATION_ID] [nvarchar](255) NOT NULL,
-	[CHILD_ORGANISATION_ID] [nvarchar](255) NOT NULL,
-	[START_DATE] [date] NULL,
-	[END_DATE] [date] NULL
+    [PARENT_ORGANISATION_ID] [nvarchar](255) NOT NULL,
+    [CHILD_ORGANISATION_ID] [nvarchar](255) NOT NULL,
+    [START_DATE] [date] NULL,
+    [END_DATE] [date] NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[ORGANISATION_NAME_VARIANTS](
-	[ORGANISATION_ID] [nvarchar](255) NOT NULL,
-	[TYPE] [nvarchar](255) NULL,
-	[NAME_VARIANT] [nvarchar](255) NULL
+    [ORGANISATION_ID] [nvarchar](255) NOT NULL,
+    [TYPE] [nvarchar](255) NULL,
+    [NAME_VARIANT] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[PERSON_PHOTO_INFORMATION](
-	[PERSON_ID] [nvarchar](255) NOT NULL,
-	[PROFILE_PHOTO] [nvarchar](255) NULL
+    [PERSON_ID] [nvarchar](255) NOT NULL,
+    [PROFILE_PHOTO] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
 
-/*
-[DATE]			2020-03-26
-[ORGANISATION]		Utrecht University
-[EMPLOYEE]		Arjan Sieverink
-[CONTACT1]		https://www.uu.nl/staff/JASieverink
-[CONTACT2]		https://www.linkedin.com/in/arjansieverink
-[REMARKS]		X_ version (modified) of original script since [ntext] data type will be removed from SQL Server sometime in the near future,
-				see https://docs.microsoft.com/en-us/sql/t-sql/data-types/ntext-text-and-image-transact-sql?view=sql-server-ver15
-[CHANGES]		<01>	replace [ntext] with [nvarchar](max)
-*/
 CREATE TABLE [dbo].[PERSON_PROFILE_INFORMATION](
-	[PERSON_ID] [nvarchar](255) NOT NULL,
-	[PROFILE_TYPE] [nvarchar](255) NULL,
---	[TEXT] [ntext] NULL
-	[TEXT] [nvarchar](max) NULL
+    [PERSON_ID] [nvarchar](255) NOT NULL,
+    [PROFILE_TYPE] [nvarchar](255) NULL,
+    [TEXT] [nvarchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[PERSON_SAPDATA](
-	[PERSON_ID] [nvarchar](255) NOT NULL,
-	[USERNAME] [nvarchar](255) NULL,
-	[TITLE] [nvarchar](255) NULL,
-	[POST_NOMINALS] [nvarchar](255) NULL,
-	[FIRST_NAME] [nvarchar](255) NULL,
-	[LAST_NAME] [nvarchar](255) NULL,
-	[FIRST_NAME_KNOWN_AS] [nvarchar](255) NULL,
-	[LAST_NAME_KNOWN_AS] [nvarchar](255) NULL,
-	[LAST_NAME_SORT] [nvarchar](255) NULL,
-	[PREVIOUS_LAST_NAME] [nvarchar](255) NULL,
-	[GENDER] [nvarchar](255) NULL,
-	[NATIONALITY] [nvarchar](255) NULL,
-	[EMAIL] [nvarchar](255) NULL,
-	[DATE_OF_BIRTH] [date] NULL,
-	[RETIRAL_DATE] [date] NULL
+    [PERSON_ID] [nvarchar](255) NOT NULL,
+    [USERNAME] [nvarchar](255) NULL,
+    [TITLE] [nvarchar](255) NULL,
+    [POST_NOMINALS] [nvarchar](255) NULL,
+    [FIRST_NAME] [nvarchar](255) NULL,
+    [LAST_NAME] [nvarchar](255) NULL,
+    [FIRST_NAME_KNOWN_AS] [nvarchar](255) NULL,
+    [LAST_NAME_KNOWN_AS] [nvarchar](255) NULL,
+    [LAST_NAME_SORT] [nvarchar](255) NULL,
+    [PREVIOUS_LAST_NAME] [nvarchar](255) NULL,
+    [GENDER] [nvarchar](255) NULL,
+    [NATIONALITY] [nvarchar](255) NULL,
+    [EMAIL] [nvarchar](255) NULL,
+    [DATE_OF_BIRTH] [date] NULL,
+    [RETIRAL_DATE] [date] NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[STAFF_ORGANISATION_RELATION](
-	[STAFF_ORGANISATION_RELATION_ID] [nvarchar](255) NULL,
-	[PERSON_ID] [nvarchar](255) NULL,
-	[ORGANISATION_ID] [nvarchar](255) NULL,
-	[JOB_TITLE] [nvarchar](255) NULL,
-	[EMPLOYED_AS] [nvarchar](255) NULL,
-	[JOB_DESCRIPTION] [nvarchar](255) NULL,
-	[EXOFFICIO_DEPARTMENTAL_ROLE] [nvarchar](255) NULL,
-	[DIRECT_PHONE_NR] [nvarchar](255) NULL,
-	[MOBILE_PHONE_NR] [nvarchar](255) NULL,
-	[EMAIL] [nvarchar](255) NULL,
-	[WORK_ADDRESS_ONE] [nvarchar](255) NULL,
-	[WORK_ADDRESS_TWO] [nvarchar](255) NULL,
-	[WORK_ADDRESS_THREE] [nvarchar](255) NULL,
-	[WORK_POSTAL_CODE] [nvarchar](255) NULL,
-	[WORK_COUNTRY] [nvarchar](255) NULL,
-	[START_DATE] [date] NULL,
-	[END_DATE] [date] NULL,
-	[FTE] [float] NULL
+    [STAFF_ORGANISATION_RELATION_ID] [nvarchar](255) NULL,
+    [PERSON_ID] [nvarchar](255) NULL,
+    [ORGANISATION_ID] [nvarchar](255) NULL,
+    [JOB_TITLE] [nvarchar](255) NULL,
+    [EMPLOYED_AS] [nvarchar](255) NULL,
+    [JOB_DESCRIPTION] [nvarchar](255) NULL,
+    [EXOFFICIO_DEPARTMENTAL_ROLE] [nvarchar](255) NULL,
+    [DIRECT_PHONE_NR] [nvarchar](255) NULL,
+    [MOBILE_PHONE_NR] [nvarchar](255) NULL,
+    [EMAIL] [nvarchar](255) NULL,
+    [WORK_ADDRESS_ONE] [nvarchar](255) NULL,
+    [WORK_ADDRESS_TWO] [nvarchar](255) NULL,
+    [WORK_ADDRESS_THREE] [nvarchar](255) NULL,
+    [WORK_POSTAL_CODE] [nvarchar](255) NULL,
+    [WORK_COUNTRY] [nvarchar](255) NULL,
+    [START_DATE] [date] NULL,
+    [END_DATE] [date] NULL,
+    [FTE] [float] NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[INTERNAL_PARTICIPANTS](
-	[PROJECT_ID] [nvarchar](1024) NOT NULL,
-	[PERSON_ID] [nvarchar](1024) NOT NULL,
-	[ORGANISATION_ID] [nvarchar](1024) NOT NULL,
-	[ROLE] [nvarchar](1024) NOT NULL,
-	[PLANNED_RESEARCHER_COMMITMENT] [float] NULL,
-	[ASSOCIATION_PERIOD_START_DATE] [date] NULL,
-	[ASSOCIATION_PERIOD_END_DATE] [date] NULL
+    [PROJECT_ID] [nvarchar](1024) NOT NULL,
+    [PERSON_ID] [nvarchar](1024) NOT NULL,
+    [ORGANISATION_ID] [nvarchar](1024) NOT NULL,
+    [ROLE] [nvarchar](1024) NOT NULL,
+    [PLANNED_RESEARCHER_COMMITMENT] [float] NULL,
+    [ASSOCIATION_PERIOD_START_DATE] [date] NULL,
+    [ASSOCIATION_PERIOD_END_DATE] [date] NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[INTERNAL_PROJECT_ORGANISATIONS](
-	[PROJECT_ID] [nvarchar](1024) NOT NULL,
-	[ORGANISATION_ID] [nvarchar](1024) NOT NULL
+    [PROJECT_ID] [nvarchar](1024) NOT NULL,
+    [ORGANISATION_ID] [nvarchar](1024) NOT NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[PROJECT_DATA](
-	[PROJECT_ID] [nvarchar](1024) NOT NULL,
-	[PROJECT_TYPE] [nvarchar](1024) NOT NULL,
-	[TITLE] [nvarchar](1024) NOT NULL,
-	[SHORT_TITLE] [nvarchar](256) NULL,
-	[START_DATE] [date] NULL,
-	[END_DATE] [date] NULL,
-	[CURTAIL_DATE] [date] NULL,
-	[CURTAIL_REASON] [nvarchar](256) NULL,
-	[MANAGED_BY_ORG_ID] [nvarchar](1024) NOT NULL,
-	[COLLABORATIVE_PROJECT] [bit] NOT NULL,
-	[VISIBILITY] [nvarchar](1024) NULL
+    [PROJECT_ID] [nvarchar](1024) NOT NULL,
+    [PROJECT_TYPE] [nvarchar](1024) NOT NULL,
+    [TITLE] [nvarchar](1024) NOT NULL,
+    [SHORT_TITLE] [nvarchar](256) NULL,
+    [START_DATE] [date] NULL,
+    [END_DATE] [date] NULL,
+    [CURTAIL_DATE] [date] NULL,
+    [CURTAIL_REASON] [nvarchar](256) NULL,
+    [MANAGED_BY_ORG_ID] [nvarchar](1024) NOT NULL,
+    [COLLABORATIVE_PROJECT] [bit] NOT NULL,
+    [VISIBILITY] [nvarchar](1024) NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[PROJECT_IDS](
-	[PROJECT_ID] [nvarchar](max) NOT NULL,
-	[ID_SOURCE] [nvarchar](max) NOT NULL,
-	[ID] [nvarchar](max) NOT NULL
+    [PROJECT_ID] [nvarchar](max) NOT NULL,
+    [ID_SOURCE] [nvarchar](max) NOT NULL,
+    [ID] [nvarchar](max) NOT NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[PROJECT_KEYWORDS](
-	[TYPE] [nvarchar](255) NULL,
-	[PROJECT_ID] [nvarchar](1024) NOT NULL,
-	[LOGICAL_NAME] [nvarchar](1024) NOT NULL,
-	[FREE_KEYWORD] [nvarchar](1024) NULL
+    [TYPE] [nvarchar](255) NULL,
+    [PROJECT_ID] [nvarchar](1024) NOT NULL,
+    [LOGICAL_NAME] [nvarchar](1024) NOT NULL,
+    [FREE_KEYWORD] [nvarchar](1024) NULL
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[PROJECT_PROJECT_RELATION](
-	[PROJECT_ID] [nvarchar](1024) NOT NULL,
-	[TARGET_PROJECT_ID] [nvarchar](1024) NOT NULL,
-	[RELATION_TYPE] [nvarchar](1024) NOT NULL
+    [PROJECT_ID] [nvarchar](1024) NOT NULL,
+    [TARGET_PROJECT_ID] [nvarchar](1024) NOT NULL,
+    [RELATION_TYPE] [nvarchar](1024) NOT NULL
 ) ON [PRIMARY]
 GO
 
@@ -164,10 +153,28 @@ GO
 
 CREATE VIEW [dbo].[PERSON_DATA]
 AS
-SELECT dbo.PERSON_SAPDATA.PERSON_ID, dbo.PERSON_SAPDATA.USERNAME, dbo.PERSON_SAPDATA.TITLE, dbo.PERSON_SAPDATA.POST_NOMINALS, dbo.PERSON_SAPDATA.FIRST_NAME, dbo.PERSON_SAPDATA.LAST_NAME, dbo.PERSON_SAPDATA.FIRST_NAME_KNOWN_AS, 
-                  dbo.PERSON_SAPDATA.LAST_NAME_KNOWN_AS, dbo.PERSON_SAPDATA.LAST_NAME_SORT, dbo.PERSON_SAPDATA.PREVIOUS_LAST_NAME, dbo.PERSON_SAPDATA.GENDER, dbo.PERSON_SAPDATA.NATIONALITY, dbo.PERSON_SAPDATA.EMAIL, 
-                  dbo.PERSON_SAPDATA.DATE_OF_BIRTH, dbo.PERSON_SAPDATA.RETIRAL_DATE, (SELECT COUNT(PERSON_ID) FROM dbo.STAFF_ORGANISATION_RELATION WHERE dbo.STAFF_ORGANISATION_RELATION.PERSON_ID = dbo.PERSON_SAPDATA.PERSON_ID) as "NUMBEROFAFFILIATIONS"
-FROM       dbo.PERSON_SAPDATA 
+SELECT
+    dbo.PERSON_SAPDATA.PERSON_ID
+    ,dbo.PERSON_SAPDATA.USERNAME
+    ,dbo.PERSON_SAPDATA.TITLE
+    ,dbo.PERSON_SAPDATA.POST_NOMINALS
+    ,dbo.PERSON_SAPDATA.FIRST_NAME
+    ,dbo.PERSON_SAPDATA.LAST_NAME
+    ,dbo.PERSON_SAPDATA.FIRST_NAME_KNOWN_AS
+    ,dbo.PERSON_SAPDATA.LAST_NAME_KNOWN_AS
+    ,dbo.PERSON_SAPDATA.LAST_NAME_SORT
+    ,dbo.PERSON_SAPDATA.PREVIOUS_LAST_NAME
+    ,dbo.PERSON_SAPDATA.GENDER
+    ,dbo.PERSON_SAPDATA.NATIONALITY
+    ,dbo.PERSON_SAPDATA.EMAIL
+    ,dbo.PERSON_SAPDATA.DATE_OF_BIRTH
+    ,dbo.PERSON_SAPDATA.RETIRAL_DATE
+    ,(SELECT COUNT(
+       PERSON_ID)
+    FROM dbo.STAFF_ORGANISATION_RELATION
+    WHERE dbo.STAFF_ORGANISATION_RELATION.PERSON_ID = dbo.PERSON_SAPDATA.PERSON_ID)
+    as "NUMBEROFAFFILIATIONS"
+FROM dbo.PERSON_SAPDATA
 
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPane1', @value=N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]

@@ -1,26 +1,63 @@
-<Azure Data Studio>
-Version: 1.16.1
-Commit: 16801c522df68e63218b39ccb5b4a7431f9bf667
-Date: 2020-03-23T22:09:40.250Z
-VS Code: 1.42.0
-Electron: 7.1.11
-Chrome: 78.0.3904.130
-Node.js: 12.8.1
-V8: 7.8.279.23-electron.0
-OS: Linux x64 5.3.0-7642-generic
+/*
+[DATE]          2020-03-26
+[ORGANISATION]  Utrecht University
+[EMPLOYEE]      Arjan Sieverink
+[CONTACT1]      https://www.uu.nl/staff/JASieverink
+[CONTACT2]      https://www.linkedin.com/in/arjansieverink
+[REMARKS]       MAchines and tools version & setup details
+*/
+
+<Pure | uu.elsevierpure.com/admin/workspace.xhtml @AWS>
+Version:                                    5.17.1-1
+
+<Linux | OS on HP EliteBook>
+Distro:                                     Pop!_OS 19.10
+Memory:                                     7.7 GiB
+Processor:                                  Intel® Core™ i7-6500U CPU @ 2.50GHz × 4
+Graphics:                                   Intel® HD Graphics 520 (Skylake GT2)
+GNOME:                                      3.34.2
+OS type:                                    64-bit
+
+<Linux | Microsoft SQL Server >
+Edition:                                    Developer Edition (64-bit)
+Version:                                    Microsoft SQL Server 2019 (RTM-CU3) (KB4538853) - 15.0.4023.6 (X64)
+
+<Linux | Azure Data Studio>
+Version:                                    1.16.1
+Commit:                                     16801c522df68e63218b39ccb5b4a7431f9bf667
+Date:                                       2020-03-23T22:09:40.250Z
+VS Code:                                    1.42.0
+Electron:                                   7.1.11
+Chrome:                                     78.0.3904.130
+Node.js:                                    12.8.1
+V8:                                         7.8.279.23-electron.0
+OS:                                         Linux x64 5.3.0-7642-generic
 </Azure Data Studio>
 
-<SQL Server Management Studio>
-SQL Server Management Studio			15.0.18206.0
-Microsoft Analysis Services Client Tools	15.0.1567.0
-Microsoft Data Access Components (MDAC)		10.0.18362.1
-Microsoft MSXML					3.0 6.0 
-Microsoft Internet Explorer			9.11.18362.0
-Microsoft .NET Framework			4.0.30319.42000
-Operating System				10.0.18363
+<Windows | OS on Lenovo ThinkPad X131e>
+Edition:                                    Windows 10 Pro
+Version:                                    1909
+Memory:                                     3.85 GiB
+Processor:                                  Intel® Core™ i3-3227U CPU @ 1.90GHz
+OS type:                                    64-bit
+
+<Windows | Microsoft SQL Server >
+Edition:                                    Developer Edition (64-bit)
+Version:                                    Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
+
+<Windows | SQL Server Management Studio>
+SQL Server Management Studio                15.0.18206.0
+Microsoft Analysis Services Client Tools    15.0.1567.0
+Microsoft Data Access Components (MDAC)     10.0.18362.1
+Microsoft MSXML                             3.0 6.0
+Microsoft Internet Explorer                 9.11.18362.0
+Microsoft .NET Framework                    4.0.30319.42000
+Operating System                            10.0.18363
 </SQL Server Management Studio>
 
-<SQL Server Management Studio, registry settings, please observe lines 344, 345; default is 10, increase to accommodate for large (>10Mb) files, set as shown here: https://developercommunity.visualstudio.com/content/problem/39940/the-registry-key-maxfilesizesupportedbylanguageser.html>
+<Windows | SQL Server Management Studio, registry settings
+ Please observe lines 344, 345; default is 10, increase to accommodate for large (>10Mb) files,
+ set as shown here: https://developercommunity.visualstudio.com/content/problem/39940/the-registry-key-maxfilesizesupportedbylanguageser.html>
 [$RootKey$]
 [$RootKey$\AutomationProperties]
 [$RootKey$\AutomationProperties\TextEditor]

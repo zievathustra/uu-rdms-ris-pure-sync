@@ -1,4 +1,11 @@
-Links to Pure documentation on synchronisations
+/*
+[DATE]          2020-03-26
+[ORGANISATION]  Utrecht University
+[EMPLOYEE]      Arjan Sieverink
+[CONTACT1]      https://www.uu.nl/staff/JASieverink
+[CONTACT2]      https://www.linkedin.com/in/arjansieverink
+[REMARKS]       Links to Pure documentation on synchronisations
+*/
 
 [Intro]
 https://doc.pure.elsevier.com/display/PureClient/Synchronizations?src=sidebar
