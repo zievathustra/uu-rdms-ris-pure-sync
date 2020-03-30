@@ -56,7 +56,7 @@ Operating System                            10.0.18363
 </SQL Server Management Studio>
 
 <Windows | SQL Server Management Studio, registry settings
- Please observe lines 344, 345; default is 10, increase to accommodate for large (>10Mb) files,
+ Please observe lines 381, 382; default is 10, increase to accommodate for large (>10Mb) files,
  set as shown here: https://developercommunity.visualstudio.com/content/problem/39940/the-registry-key-maxfilesizesupportedbylanguageser.html>
 [$RootKey$]
 [$RootKey$\AutomationProperties]
