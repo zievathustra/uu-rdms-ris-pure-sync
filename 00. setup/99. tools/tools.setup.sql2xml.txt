@@ -4,7 +4,7 @@
 [EMPLOYEE]      Arjan Sieverink
 [CONTACT1]      https://www.uu.nl/staff/JASieverink
 [CONTACT2]      https://www.linkedin.com/in/arjansieverink
-[REMARKS]       MAchines and tools version & setup details
+[REMARKS]       Machines and tools version & setup details
 */
 
 <Pure | uu.elsevierpure.com/admin/workspace.xhtml @AWS>
