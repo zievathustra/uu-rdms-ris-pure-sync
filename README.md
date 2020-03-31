@@ -40,7 +40,10 @@ should result in
 	</character>
 </characters>
 ```
-Pretty straightforward as a principle, a tad bit more challenging when working with tables, views, nested queries and the likes. Please refer to the content type specific sections for further details.
+Pretty straightforward as a principle, a tad bit more challenging when
+ working with tables, views, nested queries and the likes. Please refer to
+  the content type specific sections for further details. Read up on FOR XML
+   [here](https://docs.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server?view=sql-server-ver15).
 
 ## Repository setup
 This repo is ordered divided into five main topics:
