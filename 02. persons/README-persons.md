@@ -9,7 +9,7 @@ The *persons* synchronisation uses four tables:
 - SAP person details (_SAPDATA)
 - Affiliations (STAFF_ORGANISATION_RELATION)
 
-Please refer to [01. persons/02. scripts/01. tables](../01.%2Persons/02.%20scripts/01.%20tables) for
+Please refer to [01. persons/02. scripts/01. tables](../01.%20Persons/02.%20scripts/01.%20tables) for
  individual table creation scripts.
 
 ### Table update: PERSON_PROFILE_INFORMATION
@@ -20,7 +20,7 @@ Tests revealed that **the UU dataset** of person profiles, while packed with
    character for one row in the table, so instead of running a replace
     routine on all rows via a separate VIEW, I opted for a table UPDATE. 
     
-Please refer to [01. persons/02. scripts/03. update](../01.%2Persons/02.%20scripts/03.%20update) for individual table update scripts.
+Please refer to [01. persons/02. scripts/03. update](../01.%20Persons/02.%20scripts/03.%20update) for individual table update scripts.
     
 ## Views
 

@@ -1,9 +1,9 @@
 /*
-[DATE]		2020-03-25
-[ORGANISATION]	Utrecht University
-[EMPLOYEE]	Arjan Sieverink
-[CONTACT1]	https://www.uu.nl/staff/JASieverink
-[CONTACT2]	https://www.linkedin.com/in/arjansieverink
+[DATE]            2020-03-25
+[ORGANISATION]    Utrecht University
+[EMPLOYEE]        Arjan Sieverink
+[CONTACT1]        https://www.uu.nl/staff/JASieverink
+[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 */
 
 USE [PUREP_Staging]
@@ -21,3 +21,4 @@ SELECT
 FROM [dbo].[PERSON_SAPDATA] as tblData
 ORDER BY tblData.person_id
 FOR XML PATH('v1:user'), ROOT('v1:users'), ELEMENTS XSINIL;
+GO

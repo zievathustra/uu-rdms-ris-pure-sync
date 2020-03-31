@@ -2,13 +2,13 @@
 
 ## Tables
 
-The *organisations* synchronisation usse three tables:
+The *organisations* synchronisation uses three tables:
 
 - organisation attributes (_DATA)
 - organisation hierarchy (_HIERARCHY)
 - alternative names (short, web; _NAME_VARIANTS)
 
-Please refer to [01. organisations/02. scripts/01. tables](../01.%20organisations/02.%20scripts/01.%20tables) for
+Please refer to [01. organisations/02. scripts/01. tables](../01.%20organisations/) for
  individual table creation scripts.
  
 ## Bulk inserts
