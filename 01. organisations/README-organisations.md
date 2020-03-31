@@ -8,7 +8,7 @@ The *organisations* synchronisation uses three tables:
 - organisation hierarchy (_HIERARCHY)
 - alternative names (short, web; _NAME_VARIANTS)
 
-Please refer to [01. organisations/02. scripts/01. tables](../01.%20organisations/) for
+Please refer to [01. organisations/02. scripts/01. tables](../01.%20organisations/02.%20scripts/01.%20tables) for
  individual table creation scripts.
  
 ## Bulk inserts
