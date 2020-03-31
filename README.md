@@ -46,7 +46,7 @@ Pretty straightforward as a principle, a tad bit more challenging when
    [here](https://docs.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server?view=sql-server-ver15).
 
 ## Repository setup
-This repo is ordered divided into five main topics:
+This repo is divided into five main topics:
 1. Setup
 2. Organisations
 3. Persons
