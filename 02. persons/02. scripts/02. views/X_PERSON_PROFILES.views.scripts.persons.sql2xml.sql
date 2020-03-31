@@ -1,11 +1,11 @@
 /*
-[DATE]		2020-03-26
-[ORGANISATION]	Utrecht University
-[EMPLOYEE]	Arjan Sieverink
-[CONTACT1]	https://www.uu.nl/staff/JASieverink
-[CONTACT2]	https://www.linkedin.com/in/arjansieverink
-[REMARKS]	...
-[CHANGES]	<01>	Removed replace operations on TEXT column for reserved characters, provided UPDATE TABLE script instead. 
+[DATE]            2020-03-26
+[ORGANISATION]    Utrecht University
+[EMPLOYEE]        Arjan Sieverink
+[CONTACT1]        https://www.uu.nl/staff/JASieverink
+[CONTACT2]        https://www.linkedin.com/in/arjansieverink
+[REMARKS]         ...
+[CHANGES]         <01>    Removed replace operations on TEXT column for reserved characters, provided UPDATE TABLE script instead.
 */
 
 USE [PUREP_Staging]

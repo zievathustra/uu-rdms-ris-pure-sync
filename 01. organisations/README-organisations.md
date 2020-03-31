@@ -83,7 +83,7 @@ END as "v1:endDate"
 ### Multi value elements
 
 The *organisations* import xml combines data from several tables. For one-to
--one relationships between table one of the JOIN statements may do as
+-one relationships between tables one of the JOIN statements may do as
  illustrated by combining _DATA and _HIERARCHY. _DATA and _NAME_VARIANTS
  , however, is a one-to-many relationship. This may be solved by nesting an
   extra SELECT as illustrated below: 
