@@ -9,7 +9,7 @@ The *persons* synchronisation uses four tables:
 - SAP person details (_SAPDATA)
 - Affiliations (STAFF_ORGANISATION_RELATION)
 
-Please refer to [01. persons/02. scripts/01. tables](../02.%20persons/02.%20scripts/01.%20tables) for
+Please refer to [02. persons/02. scripts/01. tables](../02.%20persons/02.%20scripts/01.%20tables) for
  individual table creation scripts.
 
 ### Table update: PERSON_PROFILE_INFORMATION
@@ -20,7 +20,7 @@ Tests revealed that **the UU dataset** of person profiles, while packed with
    character for one row in the table, so instead of running a replace
     routine on all rows via a separate VIEW, I opted for a table UPDATE. 
     
-Please refer to [01. persons/02. scripts/03. update](../02.%20Persons/02.%20scripts/03.%20update) for individual
+Please refer to [02. persons/02. scripts/03. update](../02.%20persons/02.%20scripts/03.%20update) for individual
  table update scripts.
     
 ## Views
@@ -36,7 +36,7 @@ In order to filter only persons with affiliations and correctly process
 - Profile details (_PROFILES)
 - Affiliation specific address information (STAFF_PERSON_COMMS)
 
-Please refer to [01. persons/02. scripts/02. views](../02.%20Persons/02.%20scripts/02.%20views) for
+Please refer to [02. persons/02. scripts/02. views](../02.%20persons/02.%20scripts/02.%20views) for
  individual view creation scripts. Scripts marked 'X_' at the beginning
   of the file name are alternate versions. The how and why is documented in
    the script itself.
@@ -44,7 +44,7 @@ Please refer to [01. persons/02. scripts/02. views](../02.%20Persons/02.%20scrip
 ## Bulk inserts
 
 Bulk insert scripts for all tables may be found
- in [01. persons/02. scripts/04. bulkInsert](../02.%20persons/02.%20scripts/04.%20bulkInsert).
+ in [02. persons/02. scripts/04. bulkInsert](../02.%20persons/02.%20scripts/04.%20bulkInsert).
   
 Change the source file locations to meet your own setup. Please observe that
  scripts marked *X_* at the beginning of the file name are alternate versions

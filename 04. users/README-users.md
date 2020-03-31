@@ -9,13 +9,13 @@ The *organisations* synchronisation uses one table:
 
 - SAP person details (PERSON_SAPDATA)
 
-Please refer to [01. persons/02. scripts/01. tables](../02.%20Persons/02.%20scripts/01.%20tables) for
+Please refer to [02. persons/02. scripts/01. tables](../02.%20persons/02.%20scripts/01.%20tables) for
  individual table creation scripts.
 
 ## Bulk inserts
 
 A bulk insert script for the PERSON_SAPDATA table may be found
- in [01. persons/02. scripts/04. bulkInsert](../02.%20persons/02.%20scripts/04.%20bulkInsert).
+ in [02. persons/02. scripts/04. bulkInsert](../02.%20persons/02.%20scripts/04.%20bulkInsert).
      
 ## Transform to xml
 
