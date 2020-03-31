@@ -1,12 +1,12 @@
 /*
-[DATE]		2020-03-25
-[ORGANISATION]	Utrecht University
-[EMPLOYEE]	Arjan Sieverink
-[CONTACT1]	https://www.uu.nl/staff/JASieverink
-[CONTACT2]	https://www.linkedin.com/in/arjansieverink
-[REMARKS]	X_ version (modified) of original script since data in csv file needed manipulation
-[CHANGES]	<01>	replace '" "' values with <nothing>
-		<02>	replace 'NULL' with <nothing>
+[DATE]            2020-03-25
+[ORGANISATION]    Utrecht University
+[EMPLOYEE]        Arjan Sieverink
+[CONTACT1]        https://www.uu.nl/staff/JASieverink
+[CONTACT2]        https://www.linkedin.com/in/arjansieverink
+[REMARKS]         X_ version (modified) of original script since data in csv file needed manipulation
+[CHANGES]         <01>    replace '" "' values with <nothing>
+                  <02>    replace 'NULL' with <nothing>
 */
 
 USE PUREP_Staging
