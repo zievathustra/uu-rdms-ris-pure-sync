@@ -8,13 +8,13 @@ The *organisations* synchronisation uses three tables:
 - organisation hierarchy (_HIERARCHY)
 - alternative names (short, web; _NAME_VARIANTS)
 
-Please refer to [01. organisations/02. scripts/01. tables](../01.%20organisations/02.%20scripts/01.%20tables) for
+Please refer to [01. organisations/02. scripts/01. tables](02. scripts/01. tables) for
  individual table creation scripts.
  
 ## Bulk inserts
 
 Bulk insert scripts for attributes, hierarchy and name variants may be found
- in [01. organisations/02. scripts/04. bulkInsert](../01.%20organisations/02.%20scripts/04.%20bulkInsert).
+ in [01. organisations/02. scripts/04. bulkInsert](02. scripts/04. bulkInsert).
   
 Change the source file locations to meet your own setup. Please observe that
  scripts marked *X_* at the beginning of the file name are alternate versions

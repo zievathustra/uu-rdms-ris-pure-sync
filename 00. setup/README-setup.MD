@@ -5,23 +5,22 @@ Obviously, when figuring out how to get from tables and views to importable
   chose to set up machines for both Windows and Linux. While *en route* this
    choice proved to be a useful one as, sometimes, tool behaviour varied with
     the underlying operating system.
-      
+
 ## Machines
 
-### HP EliteBook running Pop!_OS 19.10
-    @TODO: lookup type number, G430 or something...
+### HP EliteBook 840 G3 running Linux
 
-- Pop!_OS 19.10
+- Pop!OS 19.10
 - Microsoft SQL Server 19
 - Microsoft Azure Data Studio 1.16
- 
-### Lenovo ThinkPad X131e running Windows 10 Pro
+
+### Lenovo ThinkPad X131e running Windows
 
 - Windows 10 Pro
 - Microsoft SQL Server 19
 - Microsoft SQL Server Management Studio 18.4
 
-Please find version details at [99. tools/tools.setup.sql2xml.txt](../00.%20setup/99.%20tools/tools.setup.sql2xml.txt).
+Please find version details at [99. tools/tools.setup.sql2xml.txt](99. tools/tools.setup.sql2xml.txt).
 
 ### Caveats
 
@@ -48,7 +47,7 @@ Please find version details at [99. tools/tools.setup.sql2xml.txt](../00.%20setu
 Section **02. scripts** contains scripts to create (and drop) the tables and
  views. Tables listed follow the specifications of the production setup at
   Utrecht University, so tweak them to accommodate for your situation.
-  
+
 ## Populating tables and views
 
 Section **02. scripts** also contains a script for populating the database
@@ -58,7 +57,7 @@ Section **02. scripts** also contains a script for populating the database
    a minimum of user interaction. Furthermore, table designs, data types in
     particular are well observed whereas flat file import applies its own
      logic resulting in manual corrections during or after import.
-     
+
 With our data I was able to BULK INSERT all tables but one
 : PERSON_PROFILE_INFORMATION. Somehow, the content of the
  TEXT column (of one or more records) resulted in errors I could not easily
