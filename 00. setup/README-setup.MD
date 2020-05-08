@@ -10,7 +10,8 @@ Obviously, when figuring out how to get from tables and views to importable
 
 ### HP EliteBook 840 G3 running Linux
 
-- Pop!OS 19.10
+- Pop!\_OS 19.10 (until 2020-04-23)
+- Ubuntu 20.04 LTS (as of 2020-04-24)
 - Microsoft SQL Server 19
 - Microsoft Azure Data Studio 1.16
 
