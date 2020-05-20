@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 [REMARKS]         Create database tables and views
 */
 USE PUREP_Staging

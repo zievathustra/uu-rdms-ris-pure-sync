@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 [REMARKS]         Reserved characters in table columns may break the script generating the xml with an error like
                   'FOR XML could not serialize the data for node because it contains a character (0x000E)'.
                   Identify the records as follows:

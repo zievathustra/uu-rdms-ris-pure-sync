@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 [REMARKS]         ...
 [CHANGES]         <01>    Removed replace operations on TEXT column for reserved characters, provided UPDATE TABLE script instead.
 */
@@ -24,8 +23,8 @@ FROM            dbo.PERSON_PROFILE_INFORMATION
 GO
 
 EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPane1', @value=N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]
-Begin DesignProperties = 
-   Begin PaneConfigurations = 
+Begin DesignProperties =
+   Begin PaneConfigurations =
       Begin PaneConfiguration = 0
          NumPanes = 4
          Configuration = "(H (1[41] 4[20] 2[24] 3) )"
@@ -88,14 +87,14 @@ Begin DesignProperties =
       End
       ActivePaneConfig = 0
    End
-   Begin DiagramPane = 
-      Begin Origin = 
+   Begin DiagramPane =
+      Begin Origin =
          Top = 0
          Left = 0
       End
-      Begin Tables = 
+      Begin Tables =
          Begin Table = "PERSON_PROFILE_INFORMATION"
-            Begin Extent = 
+            Begin Extent =
                Top = 6
                Left = 38
                Bottom = 119
@@ -106,13 +105,13 @@ Begin DesignProperties =
          End
       End
    End
-   Begin SQLPane = 
+   Begin SQLPane =
    End
-   Begin DataPane = 
+   Begin DataPane =
       Begin ParameterDefaults = ""
       End
    End
-   Begin CriteriaPane = 
+   Begin CriteriaPane =
       Begin ColumnWidths = 11
          Column = 1440
          Alias = 900
@@ -135,4 +134,3 @@ GO
 
 EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPaneCount', @value=1 , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'VIEW',@level1name=N'PERSON_PROFILES'
 GO
-

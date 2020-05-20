@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 [REMARKS]         Line 24-26: skip xml tag v1:endDate when table column value is NULL or xml validation in Pure will fail.
 */
 

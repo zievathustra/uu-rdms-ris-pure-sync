@@ -1,12 +1,21 @@
 /*
-2020-03-25, Utrecht University, Arjan Sieverink, https://www.uu.nl/staff/JASieverink, https://www.linkedin.com/in/arjansieverink
+[DATE]          2020-03-25
+[ORGANISATION]  Utrecht University
+[EMPLOYEE]      Arjan Sieverink
+[CONTACT1]      https://www.uu.nl/staff/JASieverink
 */
+
 USE PUREP_Staging
 GO
 
+DECLARE @path2typefolder nvarchar(255);
+DECLARE @path2subfolder nvarchar(255);
+SET @path2typefolder = '/home/sieve002/Insync/j.a.sieverink@uu.nl/OneDrive Biz - SharePoint/Team Pure2AWS - Documents/General/sql2xmlData/';
+SET @path2subfolder = '/data/import2sql/';
+
 BULK
 INSERT dbo.ORGANISATION_DATA
-FROM '/home/sieve002/uusharepoint/Team Pure2AWS - Documents/General/sql2xmlData/organisations/data/import2sql/ORGANISATION_DATA.import2sql.data.persons.sql2xml.csv'
+FROM @path2typefolder + 'organisations' + @path2subfolder + 'ORGANISATION_DATA.import2sql.data.persons.sql2xml.csv'
 WITH
 (
 FIRSTROW = 2,

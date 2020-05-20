@@ -1,9 +1,8 @@
 /*
-[DATE]		2020-03-25
-[ORGANISATION]	Utrecht University
-[EMPLOYEE]	Arjan Sieverink
-[CONTACT1]	https://www.uu.nl/staff/JASieverink
-[CONTACT2]	https://www.linkedin.com/in/arjansieverink
+[DATE]          2020-03-25
+[ORGANISATION]  Utrecht University
+[EMPLOYEE]      Arjan Sieverink
+[CONTACT1]      https://www.uu.nl/staff/JASieverink
 */
 
 USE [PUREP_Staging]
@@ -21,4 +20,3 @@ CREATE TABLE [dbo].[ORGANISATION_NAME_VARIANTS](
 	[NAME_VARIANT] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
-

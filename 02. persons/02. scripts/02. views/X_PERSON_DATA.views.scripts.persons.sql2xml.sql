@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 [REMARKS]         ...
 [CHANGES]         <01>    PERSON_PHOTO_INFORMATION removed from selection, since there is a separate view PERSON_PHOTOS
 */
@@ -16,15 +15,15 @@ GO
 
 CREATE VIEW [dbo].[PERSON_DATA]
 AS
-SELECT dbo.PERSON_SAPDATA.PERSON_ID, dbo.PERSON_SAPDATA.USERNAME, dbo.PERSON_SAPDATA.TITLE, dbo.PERSON_SAPDATA.POST_NOMINALS, dbo.PERSON_SAPDATA.FIRST_NAME, dbo.PERSON_SAPDATA.LAST_NAME, dbo.PERSON_SAPDATA.FIRST_NAME_KNOWN_AS, 
-                  dbo.PERSON_SAPDATA.LAST_NAME_KNOWN_AS, dbo.PERSON_SAPDATA.LAST_NAME_SORT, dbo.PERSON_SAPDATA.PREVIOUS_LAST_NAME, dbo.PERSON_SAPDATA.GENDER, dbo.PERSON_SAPDATA.NATIONALITY, dbo.PERSON_SAPDATA.EMAIL, 
+SELECT dbo.PERSON_SAPDATA.PERSON_ID, dbo.PERSON_SAPDATA.USERNAME, dbo.PERSON_SAPDATA.TITLE, dbo.PERSON_SAPDATA.POST_NOMINALS, dbo.PERSON_SAPDATA.FIRST_NAME, dbo.PERSON_SAPDATA.LAST_NAME, dbo.PERSON_SAPDATA.FIRST_NAME_KNOWN_AS,
+                  dbo.PERSON_SAPDATA.LAST_NAME_KNOWN_AS, dbo.PERSON_SAPDATA.LAST_NAME_SORT, dbo.PERSON_SAPDATA.PREVIOUS_LAST_NAME, dbo.PERSON_SAPDATA.GENDER, dbo.PERSON_SAPDATA.NATIONALITY, dbo.PERSON_SAPDATA.EMAIL,
                   dbo.PERSON_SAPDATA.DATE_OF_BIRTH, dbo.PERSON_SAPDATA.RETIRAL_DATE, (SELECT COUNT(PERSON_ID) FROM dbo.STAFF_ORGANISATION_RELATION WHERE dbo.STAFF_ORGANISATION_RELATION.PERSON_ID = dbo.PERSON_SAPDATA.PERSON_ID) as "NUMBEROFAFFILIATIONS"
-FROM       dbo.PERSON_SAPDATA 
+FROM       dbo.PERSON_SAPDATA
 
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_DiagramPane1', @value=N'[0E232FF0-B466-11cf-A24F-00AA00A3EFFF, 1.00]
-Begin DesignProperties = 
-   Begin PaneConfigurations = 
+Begin DesignProperties =
+   Begin PaneConfigurations =
       Begin PaneConfiguration = 0
          NumPanes = 4
          Configuration = "(H (1[40] 4[20] 2[20] 3) )"
@@ -87,14 +86,14 @@ Begin DesignProperties =
       End
       ActivePaneConfig = 0
    End
-   Begin DiagramPane = 
-      Begin Origin = 
+   Begin DiagramPane =
+      Begin Origin =
          Top = 0
          Left = 0
       End
-      Begin Tables = 
+      Begin Tables =
          Begin Table = "PERSON_SAPDATA"
-            Begin Extent = 
+            Begin Extent =
                Top = 6
                Left = 38
                Bottom = 136
@@ -104,7 +103,7 @@ Begin DesignProperties =
             TopColumn = 0
          End
          Begin Table = "PERSON_PHOTO_INFORMATION"
-            Begin Extent = 
+            Begin Extent =
                Top = 6
                Left = 302
                Bottom = 173
@@ -115,13 +114,13 @@ Begin DesignProperties =
          End
       End
    End
-   Begin SQLPane = 
+   Begin SQLPane =
    End
-   Begin DataPane = 
+   Begin DataPane =
       Begin ParameterDefaults = ""
       End
    End
-   Begin CriteriaPane = 
+   Begin CriteriaPane =
       Begin ColumnWidths = 11
          Column = 1440
          Alias = 900

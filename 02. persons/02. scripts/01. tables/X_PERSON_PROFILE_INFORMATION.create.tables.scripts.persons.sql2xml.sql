@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 [REMARKS]         X_ version (modified) of original script since [ntext] data type will be removed from SQL Server sometime in the near future,
                   see https://docs.microsoft.com/en-us/sql/t-sql/data-types/ntext-text-and-image-transact-sql?view=sql-server-ver15
 [CHANGES]         <01>    replace [ntext] with [nvarchar](max)
@@ -25,4 +24,3 @@ CREATE TABLE [dbo].[PERSON_PROFILE_INFORMATION](
     [TEXT] [nvarchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-

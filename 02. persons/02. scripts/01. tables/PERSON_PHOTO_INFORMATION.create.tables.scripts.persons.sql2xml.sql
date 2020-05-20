@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 */
 
 USE [PUREP_Staging]
@@ -20,4 +19,3 @@ CREATE TABLE [dbo].[PERSON_PHOTO_INFORMATION](
     [PROFILE_PHOTO] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
-

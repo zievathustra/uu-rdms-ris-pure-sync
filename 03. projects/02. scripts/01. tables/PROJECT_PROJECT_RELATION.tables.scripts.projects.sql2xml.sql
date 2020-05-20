@@ -1,3 +1,10 @@
+/*
+[DATE]            2020-03-25
+[ORGANISATION]    Utrecht University
+[EMPLOYEE]        Arjan Sieverink
+[CONTACT1]        https://www.uu.nl/staff/JASieverink
+*/
+
 USE [PUREP_Staging]
 GO
 
@@ -14,4 +21,3 @@ CREATE TABLE [dbo].[PROJECT_PROJECT_RELATION](
 	[RELATION_TYPE] [nvarchar](1024) NOT NULL
 ) ON [PRIMARY]
 GO
-

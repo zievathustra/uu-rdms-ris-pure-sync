@@ -3,7 +3,6 @@
 [ORGANISATION]    Utrecht University
 [EMPLOYEE]        Arjan Sieverink
 [CONTACT1]        https://www.uu.nl/staff/JASieverink
-[CONTACT2]        https://www.linkedin.com/in/arjansieverink
 */
 
 USE [PUREP_Staging]
@@ -33,4 +32,3 @@ CREATE TABLE [dbo].[PERSON_SAPDATA](
     [RETIRAL_DATE] [date] NULL
 ) ON [PRIMARY]
 GO
-

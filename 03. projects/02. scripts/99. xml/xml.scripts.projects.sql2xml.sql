@@ -8,6 +8,14 @@
 USE PUREP_Staging
 GO
 
+UPDATE dbo.INTERNAL_PROJECT_ORGANISATIONS
+    SET ORGANISATION_ID = REPLACE(REPLACE(ORGANISATION_ID, CHAR(13), ''), CHAR(10), '')
+GO
+
+UPDATE dbo.PROJECT_PROJECT_RELATION
+    SET RELATION_TYPE = REPLACE(REPLACE(RELATION_TYPE, CHAR(13), ''), CHAR(10), '')
+GO
+
 WITH xmlnamespaces(
     'v1.upmproject.pure.atira.dk' as "v1",
     'v3.commons.pure.atira.dk' as "v3"

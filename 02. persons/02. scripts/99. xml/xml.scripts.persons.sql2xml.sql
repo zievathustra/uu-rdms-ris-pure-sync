@@ -6,7 +6,12 @@
 */
 
 USE PUREP_Staging
-GO 
+GO
+
+UPDATE dbo.PERSON_PROFILE_INFORMATION
+    SET TEXT = REPLACE(TEXT, char(0x000C), '')
+WHERE TEXT like '%' + char(0x000C) + '%'
+GO
 
 WITH xmlnamespaces(
     'v1.unified-person-sync.pure.atira.dk' as "v1",
@@ -25,7 +30,7 @@ SELECT
     FROM dbo.PERSON_NAMES as vwNames
     WHERE vwNames.PERSON_ID = vwPersons.PERSON_ID
     FOR XML PATH(''), ROOT('v1:names'), TYPE)
-   ,(SELECT 
+   ,(SELECT
         vwTitles.ID as "v1:title/@id"
         ,vwTitles.TYPE as "v1:title/v1:typeClassification"
         ,'en' as "v1:title/v1:value/v3:text/@lang"
