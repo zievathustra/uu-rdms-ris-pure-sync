@@ -1,0 +1,10 @@
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\bin\Debug\Automate XML Export.dacpac
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\bin\Debug\Automate_XML_Export.dll
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\bin\Debug\Automate_XML_Export.pdb
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\obj\Debug\Automate XML Export.sqlprojAssemblyReference.cache
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\obj\Debug\Model.xml
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\obj\Debug\refactor.xml
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\obj\Debug\postdeploy.sql
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\obj\Debug\predeploy.sql
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\obj\Debug\Automate_XML_Export.dll
+C:\Users\arjan\source\repos\Automate XML Export\Automate XML Export\obj\Debug\Automate_XML_Export.pdb

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Automate XML Export", "Automate XML Export\Automate XML Export.sqlproj", "{947A1043-5C8C-427F-8E2B-6F94A2FF923B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{947A1043-5C8C-427F-8E2B-6F94A2FF923B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{947A1043-5C8C-427F-8E2B-6F94A2FF923B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{947A1043-5C8C-427F-8E2B-6F94A2FF923B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{947A1043-5C8C-427F-8E2B-6F94A2FF923B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{947A1043-5C8C-427F-8E2B-6F94A2FF923B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{947A1043-5C8C-427F-8E2B-6F94A2FF923B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F2519CB-5FF8-4F21-8935-400FFD633DC0}
+	EndGlobalSection
+EndGlobal
