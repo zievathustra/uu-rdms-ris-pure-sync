@@ -4,23 +4,12 @@
 
 The *organisations* synchronisation uses three tables:
 
-- organisation attributes (_DATA)
-- organisation hierarchy (_HIERARCHY)
-- alternative names (short, web; _NAME_VARIANTS)
+- organisation attributes (DATA)
+- organisation hierarchy (HIERARCHY)
+- alternative names (short, web; NAME_VARIANTS)
 
-Please refer to [01. organisations/02. scripts/01. tables](02. scripts/01. tables) for
- individual table creation scripts.
- 
-## Bulk inserts
+Please refer to [01. organisations/02. scripts/01. tables](02. scripts/01. tables) for individual table creation scripts.
 
-Bulk insert scripts for attributes, hierarchy and name variants may be found
- in [01. organisations/02. scripts/04. bulkInsert](02. scripts/04. bulkInsert).
-  
-Change the source file locations to meet your own setup. Please observe that
- scripts marked *X_* at the beginning of the file name are alternate versions
-  of the same code referring to a different, 'manipulated' file. The how and
-   why is documented in the script itself.
-     
 ## Transform to xml
 
 The basic syntax of a transformation query looks like this:
@@ -51,12 +40,11 @@ The query will result in xml lines formatted as follows
     </ns1:path>
 </ns1:root>
 ```
-  
+
 ### Namespaces
 
-The Pure import relies on namespaces for proper xml validation. For
- *organisations* these namespaces are used:
- 
+The Pure import relies on namespaces for proper xml validation. For *organisations* these namespaces are used:
+
  ```tsql
 WITH xmlnamespaces(
       'v1.organisation-sync.pure.atira.dk' as v1
@@ -64,16 +52,14 @@ WITH xmlnamespaces(
 ```
 ### Element attributes
 
-Element attributes are marked with a @-sign. If not assigned to a specific
- element within SELECT, the attribute is assigned to the containing PATH
-  element as demonstrated in the basic example above.
- 
+Element attributes are marked with a @-sign. If not assigned to a specific element within SELECT, the attribute is assigned to the containing PATH element as demonstrated in the basic example above.
+
 ### NULL columns
 
-The Pure import easily breaks on NULL values. Since this issue covers table
- columns that *allow* NULL values by design, simply skipping the column using
-  a CASE statement is the best way out. Example:
-  
+The Pure import easily breaks on NULL values. Since this issue covers table columns that *allow* NULL values by design, simply skipping the column using a CASE statement is the best way out.
+
+Example:
+
 ```tsql
 CASE
     WHEN isnull(tblData.END_DATE,'') <> '' THEN tblData.END_DATE
@@ -82,17 +68,13 @@ END as "v1:endDate"
 
 ### Multi value elements
 
-The *organisations* import xml combines data from several tables. For one-to
--one relationships between tables one of the JOIN statements may do as
- illustrated by combining _DATA and _HIERARCHY. _DATA and _NAME_VARIANTS
- , however, is a one-to-many relationship. This may be solved by nesting an
-  extra SELECT as illustrated below: 
-  
+The *organisations* import xml combines data from several tables. For one-to-one relationships between tables one of the JOIN statements may do as illustrated by combining DATA and HIERARCHY. DATA and NAME_VARIANTS, however, is a one-to-many relationship. This may be solved by nesting an extra SELECT as illustrated below:
+
  ```tsql
 SELECT
       ...
       ,(
-      SELECT 
+      SELECT
             tblNameVars.type as "v1:nameVariant/v1:type"
             ,'en' as "v1:nameVariant/v1:name/v3:text/@lang"
             ,'NL' as "v1:nameVariant/v1:name/v3:text/@country"
@@ -107,5 +89,4 @@ FROM [dbo].[ORGANISATION_DATA] as tblData
 FOR XML PATH('v1:organisation'),ROOT('v1:organisations')
 ```
 
-Please observe the **TYPE directive** in the nested FOR XML, ensuring name
- variants are returned as *xml* data type instead of text.
+Please observe the **TYPE directive** in the nested FOR XML, ensuring name variants are returned as *xml* data type instead of text.

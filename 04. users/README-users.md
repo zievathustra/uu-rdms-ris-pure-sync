@@ -1,7 +1,6 @@
 # **Pure synchronisations: Users**
 
-By all means, the *users* synchronisation is simple. No nested queries, no
- special data, just a limites set of columns from the Persons table.
+By all means, the *users* synchronisation is simple. No nested queries, no special data, just a limited set of columns from the Persons table.
 
 ## Tables
 
@@ -9,14 +8,8 @@ The *organisations* synchronisation uses one table:
 
 - SAP person details (PERSON_SAPDATA)
 
-Please refer to [02. persons/02. scripts/01. tables](../02.%20persons/02.%20scripts/01.%20tables) for
- individual table creation scripts.
+Please refer to [02. persons/02. scripts/01. tables](../02.%20persons/02.%20scripts/01.%20tables) for individual table creation scripts.
 
-## Bulk inserts
-
-A bulk insert script for the PERSON_SAPDATA table may be found
- in [02. persons/02. scripts/04. bulkInsert](../02.%20persons/02.%20scripts/04.%20bulkInsert).
-     
 ## Transform to xml
 
 The basic syntax of a transformation query looks like this:
@@ -47,12 +40,11 @@ The query will result in xml lines formatted as follows
     </ns1:path>
 </ns1:root>
 ```
-  
+
 ### Namespaces
 
-The Pure import relies on namespaces for proper xml validation. For
- *organisations* these namespaces are used:
- 
+The Pure import relies on namespaces for proper xml validation. For  *organisations* these namespaces are used:
+
  ```tsql
 WITH xmlnamespaces(
       'v1.user-sync.pure.atira.dk' as v1
@@ -60,6 +52,4 @@ WITH xmlnamespaces(
 ```
 ### Element attributes
 
-Element attributes are marked with a @-sign. If not assigned to a specific
- element within SELECT, the attribute is assigned to the containing PATH
-  element as demonstrated in the basic example above.
+Element attributes are marked with a @-sign. If not assigned to a specific element within SELECT, the attribute is assigned to the containing PATH element as demonstrated in the basic example above.

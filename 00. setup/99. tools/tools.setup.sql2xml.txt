@@ -1,56 +1,160 @@
 /*
-[DATE]          2020-03-26
+[DATE]          2020-06-16
 [ORGANISATION]  Utrecht University
 [EMPLOYEE]      Arjan Sieverink
 [CONTACT1]      https://www.uu.nl/staff/JASieverink
-[CONTACT2]      https://www.linkedin.com/in/arjansieverink
 [REMARKS]       Machines and tools version & setup details
 */
 
 <Pure | uu.elsevierpure.com/admin/workspace.xhtml @AWS>
-Version:                                    5.17.1-1
+Version:                                    5.17.3-2
 
 <Linux | OS on HP EliteBook>
-Distro:                                     Pop!_OS 19.10
+Distro:                                     Ubuntu 20.04 LTS
 Memory:                                     7.7 GiB
 Processor:                                  Intel® Core™ i7-6500U CPU @ 2.50GHz × 4
 Graphics:                                   Intel® HD Graphics 520 (Skylake GT2)
 GNOME:                                      3.34.2
 OS type:                                    64-bit
 
-<Linux | Microsoft SQL Server >
-Edition:                                    Developer Edition (64-bit)
-Version:                                    Microsoft SQL Server 2019 (RTM-CU3) (KB4538853) - 15.0.4023.6 (X64)
+<Linux | Microsoft SQL Server on Docker>
+Docker version:                             19.03.8, build afacb8b7f0
+MSSQL version:                              Microsoft SQL Server 2019 (RTM-CU3) (KB4538853) - 15.0.4023.6 (X64) 	Mar  4 2020 00:59:26 	Copyright (C) 2019 Microsoft Corporation	Developer Edition (64-bit) on Linux (Ubuntu 18.04.4 LTS) <X64>
 
 <Linux | Azure Data Studio>
-Version:                                    1.16.1
-Commit:                                     16801c522df68e63218b39ccb5b4a7431f9bf667
-Date:                                       2020-03-23T22:09:40.250Z
-VS Code:                                    1.42.0
-Electron:                                   7.1.11
+Version:                                    1.18.0
+Commit:                                     2acd37a1b1cff34b64fbb4ea2d40715d7e2accac
+Date:                                       2020-05-19T23:44:18.113Z
+VS Code:                                    1.45.0
+Electron:                                   7.2.4
 Chrome:                                     78.0.3904.130
 Node.js:                                    12.8.1
 V8:                                         7.8.279.23-electron.0
-OS:                                         Linux x64 5.3.0-7642-generic
+OS:                                         Linux x64 5.4.0-37-generic
 </Azure Data Studio>
 
-<Windows | OS on Lenovo ThinkPad X131e>
-Edition:                                    Windows 10 Pro
+<Windows | OS on Lenovo Y50-70>
+Edition:                                    Windows 10 Home
 Version:                                    1909
-Memory:                                     3.85 GiB
-Processor:                                  Intel® Core™ i3-3227U CPU @ 1.90GHz
+Memory:                                     16.0 GiB
+Processor:                                  Intel® Core™ i7-4710HQ CPU @ 2.50GHz
 OS type:                                    64-bit
 
+<Windows | Visual Studio 19>
+                                            Microsoft Visual Studio Community 2019
+                                            Version 16.6.0
+                                            VisualStudio.16.Release/16.6.0+30114.105
+                                            Microsoft .NET Framework
+                                            Version 4.8.03752
+
+Installed Version:                          Community
+
+Microsoft Visual Studio Tools for Applications 2019   00435-60000-00000-AA556
+Microsoft Visual Studio Tools for Applications 2019
+
+ADL Tools Service Provider   1.0
+This package contains services used by Data Lake tools
+
+ASA Service Provider   1.0
+
+ASP.NET and Web Tools 2019   16.6.936.3669
+ASP.NET and Web Tools 2019
+
+ASP.NET Core Razor Language Services   16.1.0.2020603+b3ac44798c16fff5b95dbcfe62dea84aa9a1bd72
+Provides languages services for ASP.NET Core Razor.
+
+ASP.NET Web Frameworks and Tools 2019   16.6.936.3669
+For additional information, visit https://www.asp.net/
+
+Azure App Service Tools v3.0.0   16.6.936.3669
+Azure App Service Tools v3.0.0
+
+Azure Data Lake Node   1.0
+This package contains the Data Lake integration nodes for Server Explorer.
+
+Azure Data Lake Tools for Visual Studio   2.4.6000.0
+Microsoft Azure Data Lake Tools for Visual Studio
+
+Azure Stream Analytics Tools for Visual Studio   2.4.6000.0
+Microsoft Azure Stream Analytics Tools for Visual Studio
+
+C# Tools   3.6.0-4.20251.5+910223b64f108fcf039012e0849befb46ace6e66
+C# components used in the IDE. Depending on your project type and settings, a different version of the compiler may be used.
+
+Common Azure Tools   1.10
+Provides common services for use by Azure Mobile Services and Microsoft Azure Tools.
+
+Microsoft Azure HDInsight Azure Node   2.4.6000.0
+HDInsight Node under Azure Node
+
+Microsoft Azure Hive Query Language Service   2.4.6000.0
+Language service for Hive query
+
+Microsoft Azure Stream Analytics Language Service   2.4.6000.0
+Language service for Azure Stream Analytics
+
+Microsoft Azure Stream Analytics Node   1.0
+Azure Stream Analytics Node under Azure Node
+
+Microsoft Azure Tools   2.9
+Microsoft Azure Tools for Microsoft Visual Studio 2019 - v2.9.30212.1
+
+Microsoft Continuous Delivery Tools for Visual Studio   0.4
+Simplifying the configuration of Azure DevOps pipelines from within the Visual Studio IDE.
+
+Microsoft JVM Debugger   1.0
+Provides support for connecting the Visual Studio debugger to JDWP compatible Java Virtual Machines
+
+Microsoft Library Manager   2.1.50+g25aae5a24a.R
+Install client-side libraries easily to any web project
+
+Microsoft MI-Based Debugger   1.0
+Provides support for connecting Visual Studio to MI compatible debuggers
+
+Microsoft Visual Studio Tools for Containers   1.1
+Develop, run, validate your ASP.NET Core applications in the target environment. F5 your application directly into a container with debugging, or CTRL + F5 to edit & refresh your app without having to rebuild the container.
+
+NuGet Package Manager   5.6.0
+NuGet Package Manager in Visual Studio. For more information about NuGet, visit https://docs.nuget.org/
+
+ProjectServicesPackage Extension   1.0
+ProjectServicesPackage Visual Studio Extension Detailed Info
+
+SQL Server Data Tools   16.0.62004.28040
+Microsoft SQL Server Data Tools
+
+SQL Server Integration Services   15.0.2000.121
+Microsoft SQL Server Integration Services Designer
+Version 15.0.2000.121
+
+ToolWindowHostedEditor   1.0
+Hosting json editor into a tool window
+
+TypeScript Tools   16.0.20417.2002
+TypeScript Tools for Microsoft Visual Studio
+
+Visual Basic Tools   3.6.0-4.20251.5+910223b64f108fcf039012e0849befb46ace6e66
+Visual Basic components used in the IDE. Depending on your project type and settings, a different version of the compiler may be used.
+
+Visual Studio Code Debug Adapter Host Package   1.0
+Interop layer for hosting Visual Studio Code debug adapters in Visual Studio
+
+Visual Studio Container Tools Extensions (Preview)   1.0
+View, manage, and diagnose containers within Visual Studio.
+
+Visual Studio Tools for Containers   1.0
+Visual Studio Tools for Containers
+</Visual Studio 19>
+
 <Windows | Microsoft SQL Server >
-Edition:                                    Developer Edition (64-bit)
-Version:                                    Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
+Version:                                    Microsoft SQL Server 2019 (RTM-GDR) (KB4517790) - 15.0.2070.41 (X64) 	Oct 28 2019 19:56:59 	Copyright (C) 2019 Microsoft Corporation	Developer Edition (64-bit) on Windows 10 Home 10.0 <X64> (Build 18363: )
 
 <Windows | SQL Server Management Studio>
-SQL Server Management Studio                15.0.18206.0
-Microsoft Analysis Services Client Tools    15.0.1567.0
-Microsoft Data Access Components (MDAC)     10.0.18362.1
-Microsoft MSXML                             3.0 6.0
-Microsoft Internet Explorer                 9.11.18362.0
+SQL Server Management Studio                15.0.18330.0
+SQL Server Management Objects (SMO)         16.100.37971.0
+Microsoft Analysis Services Client Tools    15.0.19040.0
+Microsoft Data Access Components (MDAC)     010.0.18362.1
+Microsoft MSXML                             3.0 6.0 
 Microsoft .NET Framework                    4.0.30319.42000
 Operating System                            10.0.18363
 </SQL Server Management Studio>

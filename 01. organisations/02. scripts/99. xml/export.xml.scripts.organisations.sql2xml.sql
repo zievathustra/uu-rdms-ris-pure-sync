@@ -3,7 +3,7 @@ GO
 
 DECLARE @x xml;
 DECLARE @file nvarchar(255);
-SET @file = 'D:\MSSQL\XML_OUTPUT\ORGANISATIONS\organisations.xml';
+SET @file = 'C:\Users\arjan\OneDrive - Universiteit Utrecht\uu-rdms-ris-pure-sync\09. ouput\organisations.xml';
 
 WITH xmlnamespaces(
       'v1.organisation-sync.pure.atira.dk' as v1

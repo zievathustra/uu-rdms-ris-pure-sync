@@ -40,30 +40,20 @@ should result in
 	</character>
 </characters>
 ```
-Pretty straightforward as a principle, a tad bit more challenging when
- working with tables, views, nested queries and the likes. Please refer to
-  the content type specific sections for further details. Read up on FOR XML
-   [here](https://docs.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server?view=sql-server-ver15).
+Pretty straightforward as a principle, a tad bit more challenging when working with tables, views, nested queries and the likes. Please refer to the content type specific sections for further details. Read up on FOR XML [here](https://docs.microsoft.com/en-us/sql/relational-databases/xml/for-xml-sql-server?view=sql-server-ver15).
 
 ## Repository setup
 This repo is divided into five main topics:
-1. Setup
-2. Organisations
-3. Persons
-4. Projects
-5. Users
+00. Setup
+01. Organisations
+02. Persons
+03. Projects
+04. Users
+05. Automation
 
-Each section has its own README.md with details on documentation, scripts and things to consider when setting up and running your own staging environment. The *Setup* topic deals with setting up a local SQL Server staging server on both a Windows and Linux client. The other topics cover the four main Pure synchronisations. Please note that the *Projects* synchronisation is not available yet.
-
-## Coming soon...
-
-### Projects
-At UU the *Projects* module, though enabled, is of little use due to typical, administrative SAP Project titles and details. Building the scripts has no priority, but it's nice to have a complete set.
-
-### Automation
-Scripts are ready for use but need to be run manually. Furthermore, saving the xml output to file needs to be done by hand, too. In the next phase, I'll try and automate and schedule running the scripts and saving the xml outputs to file.
+Each section has its own README.md with details on documentation, scripts and things to consider when setting up and running your own staging environment. The *Setup* topic deals with setting up a local SQL Server staging server on both a Windows and Linux client. The other topics cover the four main Pure synchronisations and running the automated export to xml files.
 
 ## Disclaimer
 I'm no T-SQL guru...so I started with basic knowledge, I searched the net and where I hit a wall I tried and failed until I got it working again, step by step. Please allow for code that won't win awards and feel free to share your suggestions for improvement.
 
-You're welcome to find me at [Utrecht University](https://www.uu.nl/staff/JASieverink) or at [LinkedIn](https://www.linkedin.com/in/arjansieverink).
+You're welcome to find me at [Utrecht University](https://www.uu.nl/staff/JASieverink).
