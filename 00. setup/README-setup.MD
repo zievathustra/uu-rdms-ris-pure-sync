@@ -20,7 +20,7 @@ Obviously, when figuring out how to get from tables and views to importable
 - Microsoft SQL Server 19
 - Microsoft SQL Server Management Studio 18.4
 
-Please find version details at [99. tools/tools.setup.sql2xml.txt](99. tools/tools.setup.sql2xml.txt).
+Please find version details at [99. tools/tools.setup.sql2xml.txt](https://github.com/zievathustra/uu-rdms-ris-pure-sync/blob/master/00.%20setup/99.%20tools/tools.setup.sql2xml.txt).
 
 ### Caveats
 
