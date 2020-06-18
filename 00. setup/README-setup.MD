@@ -11,7 +11,7 @@ Obviously, when figuring out how to get from tables and views to importable
 ### HP EliteBook 840 G3 running Linux
 
 - Ubuntu 20.04 LTS
-- Microsoft SQL Server 19 CU3 (via Docker image runnin on Ubuntu 18.04)
+- Microsoft SQL Server 19 CU3 (via Docker image running on Ubuntu 18.04)
 - Microsoft Azure Data Studio 1.18.0
 
 ### Lenovo Y50-70 running Windows
@@ -20,7 +20,7 @@ Obviously, when figuring out how to get from tables and views to importable
 - Microsoft SQL Server 19
 - Microsoft SQL Server Management Studio 18.4
 
-Please find version details at [99. tools/tools.setup.sql2xml.txt](99. tools/tools.setup.sql2xml.txt).
+Please find version details at [99. tools/tools.setup.sql2xml.txt](https://github.com/zievathustra/uu-rdms-ris-pure-sync/blob/master/00.%20setup/99.%20tools/tools.setup.sql2xml.txt).
 
 ### Caveats
 
