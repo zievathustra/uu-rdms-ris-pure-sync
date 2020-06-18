@@ -1,11 +1,11 @@
 USE [msdb]
 GO
 
-/****** Object:  Job [sql2xml4Pure]    Script Date: 07-Jun-20 19:25:48 ******/
+/****** Object:  Job [sql2xml4Pure]    Script Date: 18-Jun-20 16:18:54 ******/
 BEGIN TRANSACTION
 DECLARE @ReturnCode INT
 SELECT @ReturnCode = 0
-/****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 07-Jun-20 19:25:48 ******/
+/****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 18-Jun-20 16:18:54 ******/
 IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)
 BEGIN
 EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'
@@ -25,7 +25,7 @@ EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'sql2xml4Pure',
 		@category_name=N'[Uncategorized (Local)]', 
 		@owner_login_name=N'IDEAPAD\arjan', @job_id = @jobId OUTPUT
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Organisations]    Script Date: 07-Jun-20 19:25:48 ******/
+/****** Object:  Step [sql2xml4Pure-Organisations]    Script Date: 18-Jun-20 16:18:54 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Organisations', 
 		@step_id=1, 
 		@cmdexec_success_code=0, 
@@ -41,7 +41,7 @@ GO
 
 DECLARE @x xml;
 DECLARE @file nvarchar(255);
-SET @file = ''D:\MSSQL\XML_OUTPUT\ORGANISATIONS\organisations.xml'';
+SET @file = ''C:\Users\arjan\OneDrive - Universiteit Utrecht\uu-rdms-ris-pure-sync\09. ouput\organisations.xml'';
 
 WITH xmlnamespaces(
       ''v1.organisation-sync.pure.atira.dk'' as v1
@@ -80,7 +80,7 @@ GO',
 		@database_name=N'PUREP_Staging', 
 		@flags=0
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Persons]    Script Date: 07-Jun-20 19:25:48 ******/
+/****** Object:  Step [sql2xml4Pure-Persons]    Script Date: 18-Jun-20 16:18:54 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Persons', 
 		@step_id=2, 
 		@cmdexec_success_code=0, 
@@ -102,7 +102,7 @@ GO
 
 DECLARE @x xml;
 DECLARE @file nvarchar(255);
-SET @file = ''D:\MSSQL\XML_OUTPUT\PERSONS\persons.xml'';
+SET @file = ''C:\Users\arjan\OneDrive - Universiteit Utrecht\uu-rdms-ris-pure-sync\09. ouput\persons.xml'';
 
 WITH xmlnamespaces(
     ''v1.unified-person-sync.pure.atira.dk'' as v1,
@@ -122,7 +122,7 @@ SELECT
     FROM dbo.PERSON_NAMES as vwNames
     WHERE vwNames.PERSON_ID = vwPersons.PERSON_ID
     FOR XML PATH(''''), ROOT(''v1:names''), TYPE)
-   ,(SELECT 
+   ,(SELECT
         vwTitles.ID as "v1:title/@id"
         ,vwTitles.TYPE as "v1:title/v1:typeClassification"
         ,''en'' as "v1:title/v1:value/v3:text/@lang"
@@ -154,20 +154,20 @@ SELECT
         ,tblAffiliations.WORK_ADDRESS_ONE as "v1:addresses/v3:classifiedAddress/v3:building"
         ,tblAffiliations.WORK_ADDRESS_ONE + CHAR(10) + tblAffiliations.WORK_ADDRESS_TWO + CHAR(10) + tblAffiliations.WORK_ADDRESS_THREE as "v1:addresses/v3:classifiedAddress/v3:displayFormat"
         ,(SELECT
-            vwComms.STAFF_ORGANISATION_RELATION_ID as "@id"
+            vwComms.TYPE + ''@'' + vwComms.STAFF_ORGANISATION_RELATION_ID as "@id"
            ,vwComms.TYPE as "v3:classification"
            ,vwComms.VALUE as "v3:value"
         FROM dbo.STAFF_PERSON_COMMS as vwComms
         WHERE vwComms.STAFF_ORGANISATION_RELATION_ID = tblAffiliations.STAFF_ORGANISATION_RELATION_ID AND ISNULL(vwComms.VALUE,'''') <> ''''
         FOR XML PATH(''v3:classifiedPhoneNumber''), ROOT(''v1:phoneNumbers''), TYPE)
         ,CASE
-            WHEN ISNULL(tblAffiliations.EMAIL, '''') <> '''' THEN  tblAffiliations.STAFF_ORGANISATION_RELATION_ID 
+            WHEN ISNULL(tblAffiliations.EMAIL, '''') <> '''' THEN  tblAffiliations.STAFF_ORGANISATION_RELATION_ID
         END as "v1:emails/v3:classifiedEmail/@id"
         ,CASE
-            WHEN ISNULL(tblAffiliations.EMAIL, '''') <> '''' THEN ''email'' 
+            WHEN ISNULL(tblAffiliations.EMAIL, '''') <> '''' THEN ''email''
         END as "v1:emails/v3:classifiedEmail/v3:classification"
         ,CASE
-            WHEN ISNULL(tblAffiliations.EMAIL, '''') <> '''' THEN tblAffiliations.EMAIL 
+            WHEN ISNULL(tblAffiliations.EMAIL, '''') <> '''' THEN tblAffiliations.EMAIL
         END as "v1:emails/v3:classifiedEmail/v3:value"
         ,tblAffiliations.EMPLOYED_AS as "v1:employmentType"
         ,''false'' as "v1:primaryAssociation"
@@ -205,11 +205,12 @@ FOR XML PATH(''v1:person''), ROOT(''v1:persons'')
 )
 
 EXEC dbo.XMLExportToFile @x, @file
-GO', 
+GO
+', 
 		@database_name=N'PUREP_Staging', 
 		@flags=0
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Projects]    Script Date: 07-Jun-20 19:25:48 ******/
+/****** Object:  Step [sql2xml4Pure-Projects]    Script Date: 18-Jun-20 16:18:54 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Projects', 
 		@step_id=3, 
 		@cmdexec_success_code=0, 
@@ -235,7 +236,7 @@ GO
 
 DECLARE @x xml;
 DECLARE @file nvarchar(255);
-SET @file = ''D:\MSSQL\XML_OUTPUT\PROJECTS\projects.xml'';
+SET @file = ''C:\Users\arjan\OneDrive - Universiteit Utrecht\uu-rdms-ris-pure-sync\09. ouput\projects.xml'';
 
 WITH xmlnamespaces(
     ''v1.upmproject.pure.atira.dk'' as v1,
@@ -282,7 +283,7 @@ SELECT
     ,CASE
 	    WHEN (SELECT COUNT(PROJECT_ID) FROM dbo.PROJECT_KEYWORDS as tblKeywords WHERE tblKeywords.PROJECT_ID = vwProjects.PROJECT_ID) > 0 THEN
 		(SELECT 
-			''my_structured_keywords'' as "@logicalName"
+			''/dk/atira/pure/project/keywords/my_structured_keywords'' as "@logicalName"
 			,(SELECT
 					tblKeywords.LOGICAL_NAME + ''/'' + tblKeywords.TYPE as "v3:structuredKeyword/@classification"
 			FROM dbo.PROJECT_KEYWORDS as tblKeywords
@@ -300,7 +301,7 @@ GO',
 		@database_name=N'PUREP_Staging', 
 		@flags=0
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Users]    Script Date: 07-Jun-20 19:25:48 ******/
+/****** Object:  Step [sql2xml4Pure-Users]    Script Date: 18-Jun-20 16:18:54 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Users', 
 		@step_id=4, 
 		@cmdexec_success_code=0, 
@@ -316,7 +317,7 @@ GO
 
 DECLARE @x xml;
 DECLARE @file nvarchar(255);
-SET @file = ''D:\MSSQL\XML_OUTPUT\USERS\users.xml'';
+SET @file = ''C:\Users\arjan\OneDrive - Universiteit Utrecht\uu-rdms-ris-pure-sync\09. ouput\users.xml'';
 
 WITH xmlnamespaces(
       ''v1.user-sync.pure.atira.dk'' as v1,

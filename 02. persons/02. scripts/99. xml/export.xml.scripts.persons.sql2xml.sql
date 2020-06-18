@@ -29,7 +29,7 @@ SELECT
     FROM dbo.PERSON_NAMES as vwNames
     WHERE vwNames.PERSON_ID = vwPersons.PERSON_ID
     FOR XML PATH(''), ROOT('v1:names'), TYPE)
-   ,(SELECT 
+   ,(SELECT
         vwTitles.ID as "v1:title/@id"
         ,vwTitles.TYPE as "v1:title/v1:typeClassification"
         ,'en' as "v1:title/v1:value/v3:text/@lang"
@@ -61,20 +61,20 @@ SELECT
         ,tblAffiliations.WORK_ADDRESS_ONE as "v1:addresses/v3:classifiedAddress/v3:building"
         ,tblAffiliations.WORK_ADDRESS_ONE + CHAR(10) + tblAffiliations.WORK_ADDRESS_TWO + CHAR(10) + tblAffiliations.WORK_ADDRESS_THREE as "v1:addresses/v3:classifiedAddress/v3:displayFormat"
         ,(SELECT
-            vwComms.STAFF_ORGANISATION_RELATION_ID as "@id"
+            vwComms.TYPE + '@' + vwComms.STAFF_ORGANISATION_RELATION_ID as "@id"
            ,vwComms.TYPE as "v3:classification"
            ,vwComms.VALUE as "v3:value"
         FROM dbo.STAFF_PERSON_COMMS as vwComms
         WHERE vwComms.STAFF_ORGANISATION_RELATION_ID = tblAffiliations.STAFF_ORGANISATION_RELATION_ID AND ISNULL(vwComms.VALUE,'') <> ''
         FOR XML PATH('v3:classifiedPhoneNumber'), ROOT('v1:phoneNumbers'), TYPE)
         ,CASE
-            WHEN ISNULL(tblAffiliations.EMAIL, '') <> '' THEN  tblAffiliations.STAFF_ORGANISATION_RELATION_ID 
+            WHEN ISNULL(tblAffiliations.EMAIL, '') <> '' THEN  tblAffiliations.STAFF_ORGANISATION_RELATION_ID
         END as "v1:emails/v3:classifiedEmail/@id"
         ,CASE
-            WHEN ISNULL(tblAffiliations.EMAIL, '') <> '' THEN 'email' 
+            WHEN ISNULL(tblAffiliations.EMAIL, '') <> '' THEN 'email'
         END as "v1:emails/v3:classifiedEmail/v3:classification"
         ,CASE
-            WHEN ISNULL(tblAffiliations.EMAIL, '') <> '' THEN tblAffiliations.EMAIL 
+            WHEN ISNULL(tblAffiliations.EMAIL, '') <> '' THEN tblAffiliations.EMAIL
         END as "v1:emails/v3:classifiedEmail/v3:value"
         ,tblAffiliations.EMPLOYED_AS as "v1:employmentType"
         ,'false' as "v1:primaryAssociation"
