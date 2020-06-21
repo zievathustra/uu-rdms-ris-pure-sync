@@ -43,7 +43,7 @@ The query will result in xml lines formatted as follows
 
 ### Namespaces
 
-The Pure import relies on namespaces for proper xml validation. For  *organisations* these namespaces are used:
+The Pure import relies on namespaces for proper xml validation. For  *users* these namespaces are used:
 
  ```tsql
 WITH xmlnamespaces(
