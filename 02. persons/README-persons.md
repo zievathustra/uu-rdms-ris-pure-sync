@@ -89,7 +89,7 @@ END as "v1:endDate"
 
 ### Multi value elements
 
-The *organisations* import xml combines data from several tables. For one-to-one relationships between tables one of the JOIN statements may do as illustrated by combining DATA and HIERARCHY. DATA and NAME_VARIANTS, however, is a one-to-many relationship. This may be solved by nesting an extra SELECT as illustrated below:
+The *persons* import xml combines data from several tables. For one-to-one relationships between tables one of the JOIN statements may do. DATA and PROFILE_INFORMATION, however, is a one-to-many relationship. This may be solved by nesting an extra SELECT as illustrated below:
 
  ```tsql
 SELECT
@@ -117,7 +117,7 @@ For UU, tables and their data are a given since they originate from SAP. Occasio
 
 #### WHERE clause in main SELECT
 
-Given the UU dataset, the PERSON_SAPDATA table contains a number of rows that have zero rows in STAFF_ORGANISATION_RELATION. In other words, these persons have not affiliation. I opted for exclusion of those records as they break the Pure import during validation. Person candidates for xml are therefore selected as follows.
+Given the UU dataset, the PERSON_SAPDATA table contains a number of rows that have zero rows in STAFF_ORGANISATION_RELATION. In other words, these persons have no affiliation(s). I opted for exclusion of those records as they break the Pure import during validation. Person candidates for xml are therefore selected as follows.
 
 ```tsql
 WHERE vwPersons.NUMBEROFAFFILIATIONS>0
