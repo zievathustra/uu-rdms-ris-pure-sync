@@ -4,11 +4,9 @@ By all means, the *users* synchronisation is simple. No nested queries, no speci
 
 ## Tables
 
-The *organisations* synchronisation uses one table:
+The *users* synchronisation uses one table:
 
-- SAP person details (PERSON_SAPDATA)
-
-Please refer to [02. persons/02. scripts/01. tables](../02.%20persons/02.%20scripts/01.%20tables) for individual table creation scripts.
+- SAP person details **view** (PERSON_DATA)
 
 ## Transform to xml
 

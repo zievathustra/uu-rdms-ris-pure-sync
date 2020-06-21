@@ -1,11 +1,11 @@
 USE [msdb]
 GO
 
-/****** Object:  Job [sql2xml4Pure]    Script Date: 18-Jun-20 16:18:54 ******/
+/****** Object:  Job [sql2xml4Pure]    Script Date: 21-Jun-20 12:44:51 ******/
 BEGIN TRANSACTION
 DECLARE @ReturnCode INT
 SELECT @ReturnCode = 0
-/****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 18-Jun-20 16:18:54 ******/
+/****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 21-Jun-20 12:44:51 ******/
 IF NOT EXISTS (SELECT name FROM msdb.dbo.syscategories WHERE name=N'[Uncategorized (Local)]' AND category_class=1)
 BEGIN
 EXEC @ReturnCode = msdb.dbo.sp_add_category @class=N'JOB', @type=N'LOCAL', @name=N'[Uncategorized (Local)]'
@@ -25,7 +25,7 @@ EXEC @ReturnCode =  msdb.dbo.sp_add_job @job_name=N'sql2xml4Pure',
 		@category_name=N'[Uncategorized (Local)]', 
 		@owner_login_name=N'IDEAPAD\arjan', @job_id = @jobId OUTPUT
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Organisations]    Script Date: 18-Jun-20 16:18:54 ******/
+/****** Object:  Step [sql2xml4Pure-Organisations]    Script Date: 21-Jun-20 12:44:51 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Organisations', 
 		@step_id=1, 
 		@cmdexec_success_code=0, 
@@ -80,7 +80,7 @@ GO',
 		@database_name=N'PUREP_Staging', 
 		@flags=0
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Persons]    Script Date: 18-Jun-20 16:18:54 ******/
+/****** Object:  Step [sql2xml4Pure-Persons]    Script Date: 21-Jun-20 12:44:51 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Persons', 
 		@step_id=2, 
 		@cmdexec_success_code=0, 
@@ -210,7 +210,7 @@ GO
 		@database_name=N'PUREP_Staging', 
 		@flags=0
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Projects]    Script Date: 18-Jun-20 16:18:54 ******/
+/****** Object:  Step [sql2xml4Pure-Projects]    Script Date: 21-Jun-20 12:44:51 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Projects', 
 		@step_id=3, 
 		@cmdexec_success_code=0, 
@@ -301,7 +301,7 @@ GO',
 		@database_name=N'PUREP_Staging', 
 		@flags=0
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-/****** Object:  Step [sql2xml4Pure-Users]    Script Date: 18-Jun-20 16:18:54 ******/
+/****** Object:  Step [sql2xml4Pure-Users]    Script Date: 21-Jun-20 12:44:51 ******/
 EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'sql2xml4Pure-Users', 
 		@step_id=4, 
 		@cmdexec_success_code=0, 
@@ -323,19 +323,19 @@ WITH xmlnamespaces(
       ''v1.user-sync.pure.atira.dk'' as v1,
       ''v3.commons.pure.atira.dk'' as v3)
 SELECT @x = (
-SELECT 
-      tblData.person_id as "@id",
-      tblData.username as "v1:userName",
-      tblData.email as "v1:email",
-      tblData.first_name as "v1:name/v3:firstname",
-      tblData.last_name as "v1:name/v3:lastname"
-FROM [dbo].[PERSON_SAPDATA] as tblData
-WHERE ISNULL(tblData.username, '''') <> ''''
-ORDER BY tblData.person_id
+SELECT
+      vwPersons.person_id as "@id",
+      vwPersons.username as "v1:userName",
+      vwPersons.email as "v1:email",
+      vwPersons.first_name as "v1:name/v3:firstname",
+      vwPersons.last_name as "v1:name/v3:lastname"
+FROM [dbo].[PERSON_DATA] as vwPersons
+ORDER BY vwPersons.person_id
 FOR XML PATH(''v1:user''), ROOT(''v1:users''))
 
 EXEC dbo.XMLExportToFile @x, @file
-GO', 
+GO
+', 
 		@database_name=N'PUREP_Staging', 
 		@flags=0
 IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
