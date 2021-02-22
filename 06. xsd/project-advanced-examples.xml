@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<v1:upmprojects xmlns:v1="v1.upmproject.pure.atira.dk" xmlns:v3="v3.commons.pure.atira.dk">
+    <v1:upmproject id="project3" type="other">
+        <v1:activityTypes>
+            <v1:activityType>research</v1:activityType>
+        </v1:activityTypes>
+        <v1:title>
+            <v3:text lang="en" country="GB">The title of the project</v3:text>
+        </v1:title>
+        <v1:shortTitle>
+            <v3:text lang="en" country="GB">A short title</v3:text>
+        </v1:shortTitle>
+        <v1:acronym>TTotP</v1:acronym>
+        <v1:descriptions>
+            <v3:description type="projectdescription">
+                <v3:text lang="en" country="GB">The project description</v3:text>
+            </v3:description>
+            <v3:description type="laymansdescription">
+                <v3:text lang="en" country="GB">A laymans description of the project</v3:text>
+            </v3:description>
+            <v3:description type="keyfindings">
+                <v3:text lang="en" country="GB">A key findings description of the project</v3:text>
+            </v3:description>
+        </v1:descriptions>
+        <v1:ids>
+            <v3:id type="projectid">externalid1</v3:id>
+        </v1:ids>
+        <v1:internalParticipants>
+            <v1:internalParticipant>
+                <v1:personId>person1</v1:personId>
+                <v1:organisationIds>
+                    <v1:organisation id="organisation1" />
+                </v1:organisationIds>
+                <v1:role>pi</v1:role>
+                <v1:academicOwnership>1.0</v1:academicOwnership>
+                <v1:plannedResearcherCommitment>1.0</v1:plannedResearcherCommitment>
+                <v1:associationStartDate>2007-10-26</v1:associationStartDate>
+                <v1:associationEndDate>2008-02-14</v1:associationEndDate>
+            </v1:internalParticipant>
+        </v1:internalParticipants>
+        <v1:internalParticipantsResearcherCommitment>
+            <v1:researcherCommitment>
+                <v1:personId>person1</v1:personId>
+                <v1:year>2008</v1:year>
+                <v1:month>1</v1:month>
+                <v1:plannedCommitment>1.0</v1:plannedCommitment>
+                <v1:actualCommitment>1.0</v1:actualCommitment>
+            </v1:researcherCommitment>
+        </v1:internalParticipantsResearcherCommitment>
+        <v1:externalParticipants>
+            <v1:externalParticipant>
+                <v1:firstName>John</v1:firstName>
+                <v1:lastName>Smith</v1:lastName>
+                <v1:country>gb</v1:country>
+                <v1:role>coi</v1:role>
+                <v1:externalOrgName>University of Europe</v1:externalOrgName>
+                <v1:externalOrgType>unknown</v1:externalOrgType>
+                <v1:externalOrgId>UoE</v1:externalOrgId>
+            </v1:externalParticipant>
+        </v1:externalParticipants>
+        <v1:organisations>
+            <v1:organisation id="organisation1" />
+        </v1:organisations>
+        <v1:externalOrganisations>
+            <v3:externalOrganisationAssociation>
+                <v3:externalOrgName>University of Europe</v3:externalOrgName>
+                <v3:externalOrgType>unknown</v3:externalOrgType>
+                <v3:externalOrgId>UoE</v3:externalOrgId>
+            </v3:externalOrganisationAssociation>
+        </v1:externalOrganisations>
+        <v1:managedByOrganisation id="organisation1" />
+        <v1:startDate>2007-10-26+01:00</v1:startDate>
+        <v1:endDate>2008-02-14+02:00</v1:endDate>
+        <v1:curtailed>
+            <v1:date>2008-01-14</v1:date>
+            <v1:reason>Postponed due to the lack of resources</v1:reason>
+        </v1:curtailed>
+        <v1:collaborative>true</v1:collaborative>
+        <v1:collaborators>
+            <v3:collaborator type="jointapplicant">
+                <v3:externalOrgName>University of Europe</v3:externalOrgName>
+                <v3:externalOrgType>unknown</v3:externalOrgType>
+                <v3:externalOrgId>UeO</v3:externalOrgId>
+                <v3:leadCollaborator>false</v3:leadCollaborator>
+            </v3:collaborator>
+        </v1:collaborators>
+        <v1:relatedAwards>
+            <v1:relatedAwardId>award1</v1:relatedAwardId>
+        </v1:relatedAwards>
+        <v1:relatedApplications>
+            <v1:relatedApplicationId>application1</v1:relatedApplicationId>
+        </v1:relatedApplications>
+        <v1:relatedProjects>
+            <v1:relatedProject>
+                <v1:targetProjectId>project1</v1:targetProjectId>
+                <v1:relationType>partof</v1:relationType>
+            </v1:relatedProject>
+        </v1:relatedProjects>
+        <v1:relatedPublications>
+            <v1:relatedPublicationId>publication1</v1:relatedPublicationId>
+        </v1:relatedPublications>
+        <v1:relatedActivities>
+            <v1:relatedActivityId>activity1</v1:relatedActivityId>
+        </v1:relatedActivities>
+        <v1:keywords>
+            <v3:logicalGroup logicalName="keywordContainers">
+                <v3:structuredKeywords>
+                    <v3:structuredKeyword>
+                        <v3:freeKeywords>
+                            <v3:freeKeyword>
+                                <v3:text lang="en" country="GB">keyword</v3:text>
+                            </v3:freeKeyword>
+                        </v3:freeKeywords>
+                    </v3:structuredKeyword>
+                </v3:structuredKeywords>
+            </v3:logicalGroup>
+            <!-- Example of structuredKeywords, for this to work a keyword group with the logical name ASJCSubjectAreas and classification scheme /dk/atira/pure/subjectarea/asjc must exist
+            <v3:logicalGroup logicalName="ASJCSubjectAreas">
+                <v3:structuredKeywords>
+                    <v3:structuredKeyword classification="/dk/atira/pure/subjectarea/asjc/2200/2204"/>
+                    <v3:structuredKeyword classification="/dk/atira/pure/subjectarea/asjc/1500/1502"/>
+                </v3:structuredKeywords>
+            </v3:logicalGroup>
+            -->
+        </v1:keywords>
+        <v1:links>
+            <v3:link id="link1">
+                <v3:url>http://google.com</v3:url>
+                <v3:type>unspecified</v3:type>
+                <v3:description>
+                    <v3:text lang="en" country="GB">A link description text</v3:text>
+                </v3:description>
+            </v3:link>
+        </v1:links>
+        <v1:visibility>Confidential</v1:visibility>
+        <v1:workflow>approved</v1:workflow>
+    </v1:upmproject>
+</v1:upmprojects>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persons xmlns="v1.unified-person-sync.pure.atira.dk" xmlns:v3="v3.commons.pure.atira.dk">
+
+    <person id="person1" managedInPure="false">
+        <name>
+            <v3:firstname>John</v3:firstname>
+            <v3:lastname>Doe</v3:lastname>
+        </name>
+        <names>
+            <classifiedName id="classifiedAssoc1">
+                <name>
+                    <v3:firstname>Johnny</v3:firstname>
+                    <v3:lastname>Doe</v3:lastname>
+                </name>
+                <typeClassification>knownas</typeClassification>
+            </classifiedName>
+        </names>
+        <titles>
+            <title id="titleAssoc1">
+                <typeClassification>honorary</typeClassification>
+                <value>
+                    <v3:text lang="en" country="GB">Professor</v3:text>
+                </value>
+            </title>
+        </titles>
+        <gender>male</gender>
+        <dateOfBirth>17-04-1971</dateOfBirth>
+        <nationality>GB</nationality>
+        <employeeStartDate>06-12-2001</employeeStartDate>
+        <systemLeavingDate>21-08-2007</systemLeavingDate>
+        <academicProfessionEntry>06-02-2006</academicProfessionEntry>
+        <retiralDate>05-05-2009</retiralDate>
+        <privateAddress>
+            <v3:country>GB</v3:country>
+            <v3:road>Brewery Street 21</v3:road>
+            <v3:room>5B</v3:room>
+            <v3:city>Glastonbury</v3:city>
+            <v3:building>The old brewery</v3:building>
+            <v3:postalCode>SW1V 4NP</v3:postalCode>
+        </privateAddress>
+        <expert>true</expert>
+        <leavesOfAbsence>
+            <leaveOfAbsence id="leaveAssoc1">
+                <classification>other</classification>
+                <startDate>02-04-2003</startDate>
+                <endDate>02-10-2003</endDate>
+            </leaveOfAbsence>
+        </leavesOfAbsence>
+        <willingnessToPhd>true</willingnessToPhd>
+        <photos>
+            <personPhoto id="personPhotoAssoc1">
+                <classification>portrait</classification>
+                <data>
+                    <!--You have a CHOICE of the next 3 items at this level-->
+                    <http>
+                        <url>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/N.Tesla.JPG/800px-N.Tesla.JPG</url>
+                        <!--Optional:-->
+                        <mimeType>image/png</mimeType>
+                        <!--Optional:-->
+                        <fileName>portrait.png</fileName>
+                    </http>
+                    <!--<file>
+                        <path>c:\data\photo1.jpg/path>
+                        Optional:
+                        <mimeType>image/png</mimeType>
+                        Optional:
+                        <fileName>portrait.png</fileName>
+                    </file>-->
+                    <!--<byte>
+                        <base64EncodedString>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</base64EncodedString>
+                        <mimeType>image/png</mimeType>
+                        <fileName>portrait.png</fileName>
+                    </byte>-->
+                </data>
+            </personPhoto>
+        </photos>
+        <phdResearchProjects>Tesla Coil</phdResearchProjects>
+        <organisationAssociations>
+            <staffOrganisationAssociation id="staffAssoc1" managedInPure="false">
+                <affiliationId>affilID1</affiliationId>
+                <addresses>
+                    <v3:classifiedAddress id="staffAssoc1ClassifiedAddressAssoc1">
+                        <v3:addressType>visiting</v3:addressType>
+                        <v3:city>London</v3:city>
+                        <v3:postalCode>SW1V 4NP</v3:postalCode>
+                        <v3:street>Wayne Street</v3:street>
+                        <v3:country>GB</v3:country>
+                        <v3:building>21</v3:building>
+                        <v3:displayFormat>
+                            London
+                            Wayne Street
+                            England
+                            SW1V 4NP
+                        </v3:displayFormat>
+                        <v3:subDivision>us/ak</v3:subDivision>
+                        <v3:geoLocation>
+                            <v3:point>57.021218,9.976927</v3:point>
+                            <v3:polygon>
+                                57.100452089370705, 9.525146484375
+                                56.935984453472, 9.832763671875
+                                57.01083265740579, 10.2008056640625
+                                57.1779474000072, 10.1019287109375
+                                57.20771009775018, 9.7833251953125
+                                57.097468259301586, 9.5196533203125
+                            </v3:polygon>
+                        </v3:geoLocation>
+                    </v3:classifiedAddress>
+                </addresses>
+                <phoneNumbers>
+                    <v3:classifiedPhoneNumber id="personStaffAssoc1PhoneNumber1">
+                        <v3:classification>phone</v3:classification>
+                        <v3:value>07700900005</v3:value>
+                    </v3:classifiedPhoneNumber>
+                </phoneNumbers>
+                <emails>
+                    <v3:classifiedEmail id="personStaffAssocEmail1">
+                        <v3:classification>email</v3:classification>
+                        <v3:value>london@london.uk</v3:value>
+                    </v3:classifiedEmail>
+                </emails>
+                <webAddresses>
+                    <v3:classifiedWebAddress id="personStaffAssoc1WebAdress1">
+                        <v3:classification>web</v3:classification>
+                        <v3:value>
+                            <v3:text lang="en" country="GB">http:\\www.london.uk</v3:text>
+                        </v3:value>
+                    </v3:classifiedWebAddress>
+                </webAddresses>
+                <employmentType>academic</employmentType>
+                <primaryAssociation>true</primaryAssociation>
+                <organisation>
+                    <v3:source_id>organisation1</v3:source_id>
+                </organisation>
+                <period>
+                    <v3:startDate>02-02-1988</v3:startDate>
+                    <v3:endDate>04-04-2011</v3:endDate>
+                </period>
+                <keywords>
+                    <v3:logicalGroup logicalName="keywordContainers">
+                        <v3:structuredKeywords>
+                            <v3:structuredKeyword classification="T/TK">
+                                <v3:freeKeywords>
+                                    <v3:freeKeyword>
+                                        <v3:text lang="en" country="GB">Electromagnetism</v3:text>
+                                    </v3:freeKeyword>
+                                </v3:freeKeywords>
+                            </v3:structuredKeyword>
+                        </v3:structuredKeywords>
+                    </v3:logicalGroup>
+                    <v3:logicalGroup logicalName="exofficio">
+                        <v3:structuredKeywords>
+                            <v3:structuredKeyword classification="headofdepartment" />
+                        </v3:structuredKeywords>
+                    </v3:logicalGroup>
+                </keywords>
+                <supervisedByRelations>
+                    <supervisorRelation id="supervisorRelation1">
+                        <supervisor>
+                            <v3:source_id>supervisor1</v3:source_id>
+                        </supervisor>
+                        <supervisorOrganisationRelationId>organisation1</supervisorOrganisationRelationId>
+                        <supervisionPercentage>0.5</supervisionPercentage>
+                        <period>
+                            <v3:startDate>07-18-2004</v3:startDate>
+                            <v3:endDate>08-17-2005</v3:endDate>
+                        </period>
+                        <supervisorRole>lead</supervisorRole>
+                    </supervisorRelation>
+                </supervisedByRelations>
+                <staffType>academic</staffType>
+                <contractType>fixedterm</contractType>
+                <jobTitle>juniorprofessor</jobTitle>
+                <jobDescription>
+                    <v3:text lang="en">Science research</v3:text>
+                </jobDescription>
+                <fte>1</fte>
+            </staffOrganisationAssociation>
+            <visitingOrganisationAssociation id="visitingAssoc2">
+                <organisation>
+                    <v3:non_explicit_id>organisation2</v3:non_explicit_id>
+                </organisation>
+                <period>
+                    <v3:startDate>01-01-2000</v3:startDate>
+                </period>
+            </visitingOrganisationAssociation>
+        </organisationAssociations>
+        <affiliationNote>Exchange Student</affiliationNote>
+        <personEducations>
+            <personEducation id="person1EducationAssoc1">
+                <startDate>
+                    <v3:year>2002</v3:year>
+                    <v3:month>12</v3:month>
+                    <v3:day>31</v3:day>
+                </startDate>
+                <endDate>
+                    <v3:year>2006</v3:year>
+                    <v3:month>12</v3:month>
+                    <v3:day>31</v3:day>
+                </endDate>
+                <fieldOfStudyString>
+                    <v3:text lang="en" country="GB">Electronics</v3:text>
+                </fieldOfStudyString>
+                <fieldOfStudy>unknown</fieldOfStudy>
+                <qualificationString>
+                    <v3:text lang="en" country="GB">Child genius</v3:text>
+                </qualificationString>
+                <qualification>doctorate</qualification>
+                <organisations>
+                    <organisation>
+                        <v3:source_id>organisation1</v3:source_id>
+                    </organisation>
+                </organisations>
+                <projectTitle>
+                    <v3:text lang="en" country="GB">Tesla Coils influence on the earths core</v3:text>
+                </projectTitle>
+                <awardDate>05-04-2009</awardDate>
+            </personEducation>
+        </personEducations>
+        <externalPositions>
+            <externalPosition id="person1ExternalPosAssoc1">
+                <startDate>
+                    <v3:year>2005</v3:year>
+                    <v3:month>04</v3:month>
+                    <v3:day>13</v3:day>
+                </startDate>
+                <endDate>
+                    <v3:year>2007</v3:year>
+                    <v3:month>02</v3:month>
+                    <v3:day>13</v3:day>
+                </endDate>
+                <appointment>professor</appointment>
+                <appointmentString>professor</appointmentString>
+                <externalOrganisationAssociation>
+                    <identification>
+                        <v3:source_id>organisation1</v3:source_id>
+                    </identification>
+                </externalOrganisationAssociation>
+            </externalPosition>
+        </externalPositions>
+        <profileInformation>
+            <personCustomField id="person1ProfileInfo1">
+                <typeClassification>researchinterests</typeClassification>
+                <value>
+                    <v3:text lang="en" country="GB">
+                        Elsevier is a world-leading provider of information solutions that help you make better decisions, deliver better care, and sometimes make groundbreaking discoveries in science, health, and technology.
+                        Elsevier’s cross-discipline platforms support your research journey, enable research and career management, and empower you to make an even greater impact in your field.
+                    </v3:text>
+                </value>
+            </personCustomField>
+        </profileInformation>
+        <professionalQualifications>
+            <professionalQualification id="person1Qualification1">
+                <startDate>
+                    <v3:year>2001</v3:year>
+                    <v3:month>12</v3:month>
+                    <v3:day>31</v3:day>
+                </startDate>
+                <endDate>
+                    <v3:year>2003</v3:year>
+                    <v3:month>12</v3:month>
+                    <v3:day>31</v3:day>
+                </endDate>
+                <qualification>
+                    <v3:text lang="en" country="GB">Genius</v3:text>
+                </qualification>
+                <abbreviatedQualification>
+                    <v3:text lang="en" country="GB">Genius</v3:text>
+                </abbreviatedQualification>
+            </professionalQualification>
+        </professionalQualifications>
+        <keywords>
+            <v3:logicalGroup logicalName="keywordContainers">
+                <v3:structuredKeywords>
+                    <v3:structuredKeyword classification="A" />
+                    <v3:structuredKeyword classification="B/BV" />
+                </v3:structuredKeywords>
+            </v3:logicalGroup>
+        </keywords>
+        <links>
+            <v3:link id="person1LinkAssoc1">
+                <v3:url>https://www.mendeley.com/</v3:url>
+                <v3:type>mendeley</v3:type>
+                <v3:description>
+                    <v3:text lang="en" country="GB">Website for his proposed solution</v3:text>
+                </v3:description>
+            </v3:link>
+        </links>
+        <user id="user1" />
+        <personIds>
+            <v3:id type="employee" id="person1">person1</v3:id>
+        </personIds>
+        <orcId>0000-0002-1825-0097</orcId>
+        <visibility>Restricted</visibility>
+        <profiled>false</profiled>
+    </person>
+
+</persons>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<v1:upmprojects xmlns:v1="v1.upmproject.pure.atira.dk" xmlns:v3="v3.commons.pure.atira.dk">
+
+    <v1:upmproject id="project1" type="other">
+        <v1:title>
+            <v3:text lang="en" country="GB">The project title</v3:text>
+        </v1:title>
+        <v1:internalParticipants>
+            <v1:internalParticipant>
+                <v1:personId>person1</v1:personId>
+                <v1:role>pi</v1:role>
+            </v1:internalParticipant>
+        </v1:internalParticipants>
+        <v1:managedByOrganisation id="organisation1" />
+        <v1:visibility>Confidential</v1:visibility>
+    </v1:upmproject>
+
+    <v1:upmproject id="project2" type="other">
+        <v1:title>
+            <v3:text lang="en" country="GB">Another project title</v3:text>
+        </v1:title>
+        <v1:internalParticipants>
+            <v1:internalParticipant>
+                <v1:personId>person1</v1:personId>
+                <v1:organisationIds>
+                    <v1:organisation id="organisation1"/>
+                </v1:organisationIds>
+                <v1:role>pi</v1:role>
+            </v1:internalParticipant>
+        </v1:internalParticipants>
+        <v1:managedByOrganisation id="organisation1" />
+        <v1:visibility>Confidential</v1:visibility>
+    </v1:upmproject>
+
+</v1:upmprojects>
